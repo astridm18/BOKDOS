@@ -1,0 +1,143 @@
+/* Main */
+.main-unique {
+    padding: 20px 0;
+    background-color: #f9f9f9;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .container-unique {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cart-container-unique {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .cart-left-unique {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .cart-right-unique {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .cart-title-unique {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .cart-items-unique {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .cart-item-unique {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+  }
+  
+  .item-image-unique {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .item-details-unique {
+    flex-grow: 1;
+  }
+  
+  .item-title-unique {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .item-description-unique {
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .item-price-unique {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .item-actions-unique {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  
+  .item-quantity-unique {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .delete-btn-unique {
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-btn-unique:hover {
+    background-color: #ff1a1a;
+  }
+  
+  .summary-unique {
+    text-align: center;
+  }
+  
+  .summary-title-unique {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .summary-item-unique {
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .checkout-btn-unique {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .checkout-btn-unique:hover {
+    background-color: #45a049;
+  }
+  
