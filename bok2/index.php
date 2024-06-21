@@ -52,56 +52,7 @@
                         <i class="fas fa-user"></i> Registro
                     </a>
                 </div>
-            </div>
-
-
-    <!-- Modal -->
-     <!-- Modal -->
-     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <form action="registbd.php" method="POST">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="registerModalLabel">Registrar</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="registerName">Nombre</label>
-                            <input type="text" class="form-control" id="registerName" name="nombre" placeholder="Nombre" required maxlength="30">
-                        </div>
-                        <div class="form-group">
-                            <label for="registerLastName">Apellido</label>
-                            <input type="text" class="form-control" id="registerLastName" name="apellido" placeholder="Apellido" required maxlength="30">
-                        </div>
-                        <div class="form-group">
-                            <label for="registerEmail">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="registerEmail" name="email" placeholder="Email" required maxlength="30">
-                        </div>
-                        <div class="form-group">
-                            <label for="registerPassword">Contraseña</label>
-                            <input type="password" class="form-control" id="registerPassword" name="pass" placeholder="Contraseña" required maxlength="30">
-                        </div>
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="termsCheck" required>
-                            <label class="form-check-label" for="termsCheck">Estoy de acuerdo con <a href="../resources/fonts y pdfs/Términos y Condiciones Cinema Night.pdf" target="_blank">Términos y Condiciones</a></label>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Registrar</button>
-                        </div>
-                        <p class="mt-3">¿Ya tienes cuenta? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Inicia Sesión</a></p>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal End -->
-
-
-            
+            </div>         
         </nav>
          <div class="container-fluid">
             <div class="container-fluid">
@@ -118,7 +69,9 @@
                         <div class="input-group">
                             <div class="input-group-append">
                                 <button class="btn btn-white">
-                                    <i class="fas fa-shopping-cart text-primary fa-2x"></i> <!-- Icono de carrito de compras agrandado -->
+                                <a href="carrito.html">
+    <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+</a>
                                 </button>
                             </div>
                         </div>
@@ -167,8 +120,8 @@
     <div class="container-fluid pt-5">
         <div class="container">
             <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Our Services</h4>
-                <h1 class="display-4">Fresh & Organic Beans</h1>
+                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Servicios</h4>
+                <h1 class="display-4">¿Qué ofrecemos?</h1>
             </div>
             <div class="row">
                 <div class="col-lg-6 mb-5">
@@ -177,9 +130,8 @@
                             <img class="img-fluid mb-3 mb-sm-0" src="img/service-1.jpg" alt="">
                         </div>
                         <div class="col-sm-7">
-                            <h4><i class="fa fa-truck service-icon"></i>Fastest Door Delivery</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                            <h4><i class="fa fa-truck service-icon"></i>Alta Calidad</h4>
+                            <p class="m-0"> Ingredientes frescos y de primera calidad, lo que garantiza un sabor superior en todos sus productos.</p>
                         </div>
                     </div>
                 </div>
@@ -189,9 +141,9 @@
                             <img class="img-fluid mb-3 mb-sm-0" src="img/service-2.jpg" alt="">
                         </div>
                         <div class="col-sm-7">
-                            <h4><i class="fa fa-coffee service-icon"></i>Fresh Coffee Beans</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                            <h4><i class="fa fa-coffee service-icon"></i>Productos Artesanales</h4>
+                            <p class="m-0"> 
+                                Personalizamos los productos según las preferencias y necesidades de los clientes.</p>
                         </div>
                     </div>
                 </div>
@@ -201,9 +153,9 @@
                             <img class="img-fluid mb-3 mb-sm-0" src="img/service-3.jpg" alt="">
                         </div>
                         <div class="col-sm-7">
-                            <h4><i class="fa fa-award service-icon"></i>Best Quality Coffee</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                            <h4><i class="fa fa-award service-icon"></i>Personalización y Creatividad</h4>
+                            <p class="m-0"> Opciones personalizadas para decoraciones y empaques, 
+                                lo que permite que los productos sean únicos y especiales para cada ocasión.</p>
                         </div>
                     </div>
                 </div>
@@ -213,9 +165,9 @@
                             <img class="img-fluid mb-3 mb-sm-0" src="img/service-4.jpg" alt="">
                         </div>
                         <div class="col-sm-7">
-                            <h4><i class="fa fa-table service-icon"></i>Online Table Booking</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea et et lorem dolor sed est sit
-                                invidunt, dolore tempor diam ipsum takima erat tempor</p>
+                            <h4><i class="fa fa-table service-icon"></i>Asesoría Garantizada</h4>
+                            <p class="m-0">Nuestro experto equipo está disponible en línea para proporcionar recomendaciones
+                                 y asegurar una experiencia de compra satisfactoria.</p>
                         </div>
                     </div>
                 </div>
@@ -228,14 +180,14 @@
     <!-- Offer Start -->
     <div class="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">
         <div class="container py-5">
-            <h1 class="display-3 text-primary mt-3">50% OFF</h1>
-            <h1 class="text-white mb-3">Sunday Special Offer</h1>
-            <h4 class="text-white font-weight-normal mb-4 pb-3">Only for Sunday from 1st Jan to 30th Jan 2045</h4>
+            <h1 class="display-3 text-primary mt-3">25% OFF</h1>
+            <h1 class="text-white mb-3">Oferta Especial de Domingo</h1>
+            <h4 class="text-white font-weight-normal mb-4 pb-3">Del 15 al 30 de junio de 2024</h4>
             <form class="form-inline justify-content-center mb-4">
                 <div class="input-group">
-                    <input type="text" class="form-control p-4" placeholder="Your Email" style="height: 60px;">
+                    <input type="text" class="form-control p-4" placeholder="Correo electrónico" style="height: 60px;">
                     <div class="input-group-append">
-                        <button class="btn btn-primary font-weight-bold px-4" type="submit">Sign Up</button>
+                        <button class="btn btn-primary font-weight-bold px-4" type="submit">Registrarse</button>
                     </div>
                 </div>
             </form>
@@ -332,9 +284,9 @@
                 <p>Déjanos tu correo electrónico y recibirás de lo nuevo de BOKDOS</p>
                 <div class="w-100">
                     <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Correo">
                         <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                            <button class="btn btn-primary font-weight-bold px-3">Registrarse</button>
                         </div>
                     </div>
                 </div>
@@ -362,8 +314,6 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    
-
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
@@ -371,5 +321,40 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Registro e Inicio de Sesión</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Formulario de Registro -->
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="registerName">Nombre</label>
+                        <input type="text" class="form-control" id="registerName" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="registerEmail" placeholder="Ingrese su correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Contraseña</label>
+                        <input type="password" class="form-control" id="registerPassword" placeholder="Ingrese su contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                </form>
+
+                <hr>
+
+                <!-- Formulario de Inicio de Sesión -->
+               
+            </div>
+        </div>
+    </div>
+</div>
 
 </html>

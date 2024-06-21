@@ -82,7 +82,7 @@
                     <div style="text-align: justify;">
                       <p>Su inicio en 2018 como un pasatiempo en el colegio, BOKDOS ha evolucionado hasta convertirse en un negocio en crecimiento. Lo que comenzó como una pasión personal por la repostería se ha transformado en un emprendimiento que ofrece deliciosos brownies, galletas y dulces artesanales. Con dedicación y amor por el arte culinario, hemos logrado conquistar a nuestros clientes y expandir nuestras operaciones.</p>
                     </div>
-                    <a href="" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Learn More</a>
+                    <a href="" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Ver más</a>
                 </div>
                 <div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
                     <div class="position-relative h-100">
@@ -95,7 +95,7 @@
                     <p>Nos comprometemos a innovar constantemente en nuestras recetas y procesos, manteniendo siempre la esencia de nuestra pasión por la repostería. Queremos expandir nuestras operaciones a nivel nacional y eventualmente internacional, llevando la dulzura y el amor por el arte culinario a todos los rincones del mundo.</p>
                     <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Somos Excelencia</h5>
                     <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Exquisitez en un bocado</h5>
-                    <a href="" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Learn More</a>
+                    <a href="" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -135,10 +135,10 @@
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Más Información</h4>
                 <p>Déjanos tu correo electrónico y recibirás de lo nuevo de BOKDOS</p>
                 <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Correo">
                         <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                            <button class="btn btn-primary font-weight-bold px-3">Registrarse</button>
                         </div>
                     </div>
                 </div>

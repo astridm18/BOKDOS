@@ -180,10 +180,10 @@
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Más Información</h4>
                 <p>Déjanos tu correo electrónico y recibirás de lo nuevo de BOKDOS</p>
                 <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Correo">
                         <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                            <button class="btn btn-primary font-weight-bold px-3">Registrarse</button>
                         </div>
                     </div>
                 </div>
