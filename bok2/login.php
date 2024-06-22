@@ -1,11 +1,9 @@
 <?php
-
 /**
 * Este documento permite que el user (ya registrado) pueda iniciar sesión dentro de la página 
 *
 *
 */
-
 session_start();
 
     $servidor = "Localhost";
@@ -40,7 +38,7 @@ if ($resultado->num_rows == 1) {
     exit;
 } else {
     // Error en las credenciales de inicio de sesión
-    echo "Credenciales inválidas. Inténtalo nuevamente.";
+    echo "Credenciales inválidas. Inténtalo nuevamente." . $conn->connect_error;
 }
 
 $conn->close();

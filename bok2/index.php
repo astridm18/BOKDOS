@@ -321,37 +321,71 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+<!--
+ <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="registerModalLabel">Registro e Inicio de Sesión</h5>
+                <h5 class="modal-title" id="registerModalLabel">Registro </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Formulario de Registro -->
-                <form id="registerForm">
+                <form id="registerForm" action="registro.php" method="POST">
                     <div class="form-group">
                         <label for="registerName">Nombre</label>
-                        <input type="text" class="form-control" id="registerName" placeholder="Ingrese su nombre">
+                        <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerName">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido">
                     </div>
                     <div class="form-group">
                         <label for="registerEmail">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="registerEmail" placeholder="Ingrese su correo electrónico">
+                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico">
                     </div>
                     <div class="form-group">
                         <label for="registerPassword">Contraseña</label>
-                        <input type="password" class="form-control" id="registerPassword" placeholder="Ingrese su contraseña">
+                        <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña">
                     </div>
                     <button type="submit" class="btn btn-primary">Registrarse</button>
+                    <p class="terminoa">¿Ya tienes cuenta? <a href="#" class="cambio-mod2">Inicia Sesión</a></p>
+                </form>
+
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+ -->
+                <!-- Formulario de Inicio de Sesión -->
+               
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Inicio Sesión </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm" action="login.php" method="POST">
+                    <div class="form-group">
+                        <label for="registerEmail">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Contraseña</label>
+                        <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    <p class="terminoa">¿Primera vez por aquí? <a href="#" class="cambio-mod">Regístrate</a></p>
                 </form>
 
                 <hr>
 
-                <!-- Formulario de Inicio de Sesión -->
-               
             </div>
         </div>
     </div>
