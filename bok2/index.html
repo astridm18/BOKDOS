@@ -321,7 +321,8 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-<!--
+
+<!-- Modal Registro -->
  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -349,8 +350,10 @@
                         <label for="registerPassword">Contraseña</label>
                         <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña">
                     </div>
-                    <button type="submit" class="btn btn-primary">Registrarse</button>
-                    <p class="terminoa">¿Ya tienes cuenta? <a href="#" class="cambio-mod2">Inicia Sesión</a></p>
+                    <div class="d-flex flex-column align-items-center">
+                    <button type="submit" class="btn btn-primary mt-4">Registrarse</button>
+                    <p class="terminoa mt-2">¿Ya tienes cuenta? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#registerModal2" class="cambio-mod2">Inicia Sesión</a></p>
+                    </div>
                 </form>
 
                 <hr>
@@ -358,10 +361,9 @@
         </div>
     </div>
 </div>
- -->
-                <!-- Formulario de Inicio de Sesión -->
-               
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+             
+<!--Modal Inicio de sesion  -->
+<div class="modal fade" id="registerModal2" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -380,15 +382,16 @@
                         <label for="registerPassword">Contraseña</label>
                         <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña">
                     </div>
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                    <p class="terminoa">¿Primera vez por aquí? <a href="#" class="cambio-mod">Regístrate</a></p>
+                    <div class="d-flex flex-column align-items-center">
+                        <button type="submit" class="btn btn-primary mb-2 mt-4">Iniciar Sesión</button>
+                        <p class="terminoa">¿Primera vez por aquí? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#registerModal" class="cambio-mod">Regístrate</a></p>
+                    </div>
                 </form>
-
                 <hr>
-
             </div>
         </div>
     </div>
 </div>
 
+<!--Modal Inicio de sesion -->
 </html>

@@ -84,7 +84,9 @@
                             <h5 class="menu-price">$2</h5>
                         </div>
                         <div class="col-8 col-sm-9">
-                            <h4>Classic Cookie</h4>
+                            <div class="d-flex justify-content-between mr-2">
+                                <h4>Classic Cookie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                            </div>
                             <p class="m-0">Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia crujiente y deliciosa que te transportará a los recuerdos de la infancia.</p>
                         </div>
                     </div>
@@ -94,7 +96,9 @@
                             <h5 class="menu-price">$3</h5>
                         </div>
                         <div class="col-8 col-sm-9">
-                            <h4>Monster Cookie</h4>
+                            <div class="d-flex justify-content-between mr-2">
+                                <h4>Monster Cookie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                            </div>
                             <p class="m-0">Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.</p>
                         </div>
                     </div>
@@ -103,8 +107,10 @@
                             <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/galleta3.jpg" alt="">
                             <h5 class="menu-price">$3.5</h5>
                         </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Velvet Cookie</h4>
+                        <div class="col-8 col-sm-9 ">
+                            <div class="d-flex justify-content-between mr-2">
+                                <h4>Velvet Cookie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                            </div>
                             <p class="m-0">Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una experiencia gourmet única.</p>
                         </div>
                     </div>
@@ -117,7 +123,10 @@
                             <h5 class="menu-price">$3</h5>
                         </div>
                         <div class="col-8 col-sm-9">
-                            <h4>Fudgy Brownie</h4>
+                            <div class="d-flex justify-content-between mr-2">
+                                <h4>Fudgy Brownie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+
+                            </div>
                             <p class="m-0">Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para los amantes del chocolate.</p>
                         </div>
                     </div>
@@ -127,7 +136,9 @@
                             <h5 class="menu-price">$3.5</h5>
                         </div>
                         <div class="col-8 col-sm-9">
-                            <h4>Walnut Brownie</h4>
+                            <div class="d-flex justify-content-between mr-2">
+                                <h4>Walnut Brownie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                            </div>
                             <p class="m-0">Disfruta de la combinación perfecta de nueces crujientes y chocolate en nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia única para tu paladar.</p>
                         </div>
                     </div>
@@ -137,7 +148,9 @@
                             <h5 class="menu-price">$4</h5>
                         </div>
                         <div class="col-8 col-sm-9">
-                            <h4>Cheesecake Brownie</h4>
+                            <div class="d-flex justify-content-between mr-2">
+                            <h4>Cheesecake Brownie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                            </div>
                             <p class="m-0">Experimenta la fusión perfecta entre un brownie decadente y un suave cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no querrás perderte.</p>
                         </div>
                     </div>
