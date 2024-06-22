@@ -85,7 +85,7 @@
                         </div>
                         <div class="col-8 col-sm-9">
                             <div class="d-flex justify-content-between mr-2">
-                                <h4>Classic Cookie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                <h4>Classic Cookie</h4>  <a href="#" data-toggle="modal" data-target="#cartModal">  <i class="fas fa-shopping-cart text-primary fa-2x"></i> </a> 
                             </div>
                             <p class="m-0">Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia crujiente y deliciosa que te transportará a los recuerdos de la infancia.</p>
                         </div>
@@ -97,7 +97,7 @@
                         </div>
                         <div class="col-8 col-sm-9">
                             <div class="d-flex justify-content-between mr-2">
-                                <h4>Monster Cookie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                <h4>Monster Cookie</h4>  <a href="#" data-toggle="modal" data-target="#cartModal">  <i class="fas fa-shopping-cart text-primary fa-2x"></i> </a> 
                             </div>
                             <p class="m-0">Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.</p>
                         </div>
@@ -109,7 +109,7 @@
                         </div>
                         <div class="col-8 col-sm-9 ">
                             <div class="d-flex justify-content-between mr-2">
-                                <h4>Velvet Cookie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                <h4>Velvet Cookie</h4>  <a href="#" data-toggle="modal" data-target="#cartModal">  <i class="fas fa-shopping-cart text-primary fa-2x"></i> </a> 
                             </div>
                             <p class="m-0">Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una experiencia gourmet única.</p>
                         </div>
@@ -124,8 +124,7 @@
                         </div>
                         <div class="col-8 col-sm-9">
                             <div class="d-flex justify-content-between mr-2">
-                                <h4>Fudgy Brownie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
-
+                                <h4>Fudgy Brownie</h4>   <a href="#" data-toggle="modal" data-target="#cartModal">  <i class="fas fa-shopping-cart text-primary fa-2x"></i> </a> 
                             </div>
                             <p class="m-0">Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para los amantes del chocolate.</p>
                         </div>
@@ -137,7 +136,7 @@
                         </div>
                         <div class="col-8 col-sm-9">
                             <div class="d-flex justify-content-between mr-2">
-                                <h4>Walnut Brownie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                <h4>Walnut Brownie</h4>   <a href="#" data-toggle="modal" data-target="#cartModal">  <i class="fas fa-shopping-cart text-primary fa-2x"></i> </a> 
                             </div>
                             <p class="m-0">Disfruta de la combinación perfecta de nueces crujientes y chocolate en nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia única para tu paladar.</p>
                         </div>
@@ -149,7 +148,7 @@
                         </div>
                         <div class="col-8 col-sm-9">
                             <div class="d-flex justify-content-between mr-2">
-                            <h4>Cheesecake Brownie</h4>   <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                            <h4>Cheesecake Brownie</h4>  <a href="#" data-toggle="modal" data-target="#cartModal">  <i class="fas fa-shopping-cart text-primary fa-2x"></i> </a> 
                             </div>
                             <p class="m-0">Experimenta la fusión perfecta entre un brownie decadente y un suave cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no querrás perderte.</p>
                         </div>
@@ -208,6 +207,29 @@
         </div>
     </div>
     <!-- Footer End -->
+
+    <!-- Modal agregar al carrito -->
+    <!-- Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Notificacion</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center flex-column">
+                    <i class="fas fa-check-circle text-success fa-3x mb-3"></i>
+                    <h3 class="d-flex align-items-center text-center" >Producto agregado exitosamente</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal agregar al carrito -->
+
+
 
 
     <!-- Back to Top -->
