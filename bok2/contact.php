@@ -9,7 +9,7 @@
     <meta content="Free Website Template" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/icono.png" rel="icon">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,28 +30,52 @@
    </style>
 
 <body>
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
+<div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
             <a href="index.html" class="navbar-brand px-lg-4 m-0">
-                <h1 style= "font-family:monoton; font-weight: 70 !important" class="m-0 display-4 text-uppercase text-white">BOKDOS</h1>
+                <h1 style= "font-family:monoton; font-weight: 70 !important" class="m-0 display-4 text-uppercase text-white">BO
+                    <span class="larger-k">K</span>
+                    DOS
+                </h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto p-4">
-                    <a href="index.php" class="nav-item nav-link active">Inicio</a>
-                    <a href="about.php" class="nav-item nav-link">Acerca</a>
-                    <a href="menu.php" class="nav-item nav-link">Menú</a>
-                    <a href="contact.php" class="nav-item nav-link">Contacto</a>
-                    <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
-                        <i class="fas fa-user"></i> Registro
-                    </a>
-                </div>
-            </div>
-        </nav>
+            <?php
+session_start();
+if (isset($_SESSION['nombre'])) {
+    $nombre = $_SESSION['nombre'];
+}
+?>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+    <div class="navbar-nav ml-auto p-4">
+        <a href="index.php" class="nav-item nav-link active">Inicio</a>
+        <a href="about.php" class="nav-item nav-link">Acerca</a>
+        <a href="menu.php" class="nav-item nav-link">Menú</a>
+        <a href="contact.php" class="nav-item nav-link">Contacto</a>
+        <?php
+        if (isset($nombre)) {
+        ?>
+            <a href="#" class="nav-item nav-link">
+                <i class="fas fa-user"></i> 
+                <?php echo $nombre; ?>
+            </a>
+            <a href="logout.php" class="nav-item nav-link">
+                <i class="fas fa-sign-out-alt"></i> 
+            </a>
+        <?php
+        } else {
+        ?>
+            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
+                <i class="fas fa-user"></i> Registro
+            </a>
+        <?php
+        }
+        ?>
     </div>
+</div>   
+</nav>
+</div>      
     <!-- Navbar End -->
 
 
@@ -94,11 +118,11 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 pb-5">
-                    <iframe style="width: 100%; height: 443px;"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
+            <div class="col-md-6 pb-5">
+    <iframe style="width: 100%; height: 443px;"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.905169437979!2d-63.8713805844604!3d10.97609479216468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c318a1d8cfd4e19%3A0xc3c2d1e5278f0b!2sPampatar%2C%20Isla%20de%20Margarita%2C%20Nueva%20Esparta%2C%20Venezuela!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
                 <div class="col-md-6 pb-5">
                     <div class="contact-form">
                         <div id="success"></div>
@@ -208,5 +232,81 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+
+<!-- Modal Registro -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Registro </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm" action="registro.php" method="POST">
+                    <div class="form-group">
+                        <label for="registerName">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerName">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Contraseña</label>
+                        <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña">
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                    <button type="submit" class="btn btn-primary mt-4">Registrarse</button>
+                    <p class="terminoa mt-2">¿Ya tienes cuenta? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#registerModal2" class="cambio-mod2">Inicia Sesión</a></p>
+                    </div>
+                </form>
+
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+             
+<!--Modal Inicio de sesion  -->
+<div class="modal fade" id="registerModal2" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Inicio Sesión </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm" action="login.php" method="POST">
+                    <div class="form-group">
+                        <label for="registerEmail">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Contraseña</label>
+                        <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña">
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <button type="submit" class="btn btn-primary mb-2 mt-4">Iniciar Sesión</button>
+                        <p class="terminoa">¿Primera vez por aquí? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#registerModal" class="cambio-mod">Regístrate</a></p>
+                    </div>
+                </form>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
 </html>

@@ -41,18 +41,39 @@
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-  
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto p-4">
-                    <a href="index.php" class="nav-item nav-link active">Inicio</a>
-                    <a href="about.php" class="nav-item nav-link">Acerca</a>
-                    <a href="menu.php" class="nav-item nav-link">Menú</a>
-                    <a href="contact.php" class="nav-item nav-link">Contacto</a>
-                    <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
-                        <i class="fas fa-user"></i> Registro
-                    </a>
-                </div>
-            </div>         
+            <?php
+session_start();
+if (isset($_SESSION['nombre'])) {
+    $nombre = $_SESSION['nombre'];
+}
+?>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+    <div class="navbar-nav ml-auto p-4">
+        <a href="index.php" class="nav-item nav-link active">Inicio</a>
+        <a href="about.php" class="nav-item nav-link">Acerca</a>
+        <a href="menu.php" class="nav-item nav-link">Menú</a>
+        <a href="contact.php" class="nav-item nav-link">Contacto</a>
+        <?php
+        if (isset($nombre)) {
+        ?>
+            <a href="#" class="nav-item nav-link">
+                <i class="fas fa-user"></i> 
+                <?php echo $nombre; ?>
+            </a>
+            <a href="logout.php" class="nav-item nav-link">
+                <i class="fas fa-sign-out-alt"></i> 
+            </a>
+        <?php
+        } else {
+        ?>
+            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
+                <i class="fas fa-user"></i> Registro
+            </a>
+        <?php
+        }
+        ?>
+    </div>
+</div>        
         </nav>
          <div class="container-fluid">
             <div class="container-fluid">

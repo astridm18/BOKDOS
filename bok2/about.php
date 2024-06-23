@@ -9,7 +9,7 @@
     <meta content="Free Website Template" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/icono.png" rel="icon">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -33,24 +33,49 @@
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
             <a href="index.html" class="navbar-brand px-lg-4 m-0">
-                <h1 style= "font-family:monoton; font-weight: 70 !important" class="m-0 display-4 text-uppercase text-white">BOKDOS</h1>
+                <h1 style= "font-family:monoton; font-weight: 70 !important" class="m-0 display-4 text-uppercase text-white">BO
+                    <span class="larger-k">K</span>
+                    DOS
+                </h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto p-4">
-                    <a href="index.php" class="nav-item nav-link active">Inicio</a>
-                    <a href="about.php" class="nav-item nav-link">Acerca</a>
-                    <a href="menu.php" class="nav-item nav-link">Menú</a>
-                    <a href="contact.php" class="nav-item nav-link">Contacto</a>
-                    <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
-                        <i class="fas fa-user"></i> Registro
-                    </a>
-                </div>
-            </div>
-        </nav>
+            <?php
+session_start();
+if (isset($_SESSION['nombre'])) {
+    $nombre = $_SESSION['nombre'];
+}
+?>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+    <div class="navbar-nav ml-auto p-4">
+        <a href="index.php" class="nav-item nav-link active">Inicio</a>
+        <a href="about.php" class="nav-item nav-link">Acerca</a>
+        <a href="menu.php" class="nav-item nav-link">Menú</a>
+        <a href="contact.php" class="nav-item nav-link">Contacto</a>
+        <?php
+        if (isset($nombre)) {
+        ?>
+            <a href="#" class="nav-item nav-link">
+                <i class="fas fa-user"></i> 
+                <?php echo $nombre; ?>
+            </a>
+            <a href="logout.php" class="nav-item nav-link">
+                <i class="fas fa-sign-out-alt"></i> 
+            </a>
+        <?php
+        } else {
+        ?>
+            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
+                <i class="fas fa-user"></i> Registro
+            </a>
+        <?php
+        }
+        ?>
     </div>
+</div>     
+</nav>
+</div>     
     <!-- Navbar End -->
 
 
@@ -82,7 +107,9 @@
                     <div style="text-align: justify;">
                       <p>Su inicio en 2018 como un pasatiempo en el colegio, BOKDOS ha evolucionado hasta convertirse en un negocio en crecimiento. Lo que comenzó como una pasión personal por la repostería se ha transformado en un emprendimiento que ofrece deliciosos brownies, galletas y dulces artesanales. Con dedicación y amor por el arte culinario, hemos logrado conquistar a nuestros clientes y expandir nuestras operaciones.</p>
                     </div>
-                    <a href="" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Ver más</a>
+                    <div class="text-center">
+                        <a href="" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Ver más</a>
+</div>
                 </div>
                 <div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
                     <div class="position-relative h-100">
@@ -95,7 +122,9 @@
                     <p>Nos comprometemos a innovar constantemente en nuestras recetas y procesos, manteniendo siempre la esencia de nuestra pasión por la repostería. Queremos expandir nuestras operaciones a nivel nacional y eventualmente internacional, llevando la dulzura y el amor por el arte culinario a todos los rincones del mundo.</p>
                     <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Somos Excelencia</h5>
                     <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Exquisitez en un bocado</h5>
-                    <a href="" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Ver más</a>
+                    <div class="text-center">
+                         <a href="menu.php" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Menú</a>
+</div>
                     </div>
                 </div>
             </div>
@@ -173,5 +202,79 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+
+<!-- Modal Registro -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Registro </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm" action="registro.php" method="POST">
+                    <div class="form-group">
+                        <label for="registerName">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerName">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Contraseña</label>
+                        <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña">
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                    <button type="submit" class="btn btn-primary mt-4">Registrarse</button>
+                    <p class="terminoa mt-2">¿Ya tienes cuenta? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#registerModal2" class="cambio-mod2">Inicia Sesión</a></p>
+                    </div>
+                </form>
+
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+             
+<!--Modal Inicio de sesion  -->
+<div class="modal fade" id="registerModal2" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Inicio Sesión </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm" action="login.php" method="POST">
+                    <div class="form-group">
+                        <label for="registerEmail">Correo Electrónico</label>
+                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico">
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Contraseña</label>
+                        <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña">
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <button type="submit" class="btn btn-primary mb-2 mt-4">Iniciar Sesión</button>
+                        <p class="terminoa">¿Primera vez por aquí? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#registerModal" class="cambio-mod">Regístrate</a></p>
+                    </div>
+                </form>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 </html>
