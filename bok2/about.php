@@ -28,6 +28,8 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
    </style>
+  
+
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
@@ -49,8 +51,8 @@ if (isset($_SESSION['nombre'])) {
 ?>
       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
     <div class="navbar-nav ml-auto p-4">
-        <a href="index.php" class="nav-item nav-link active">Inicio</a>
-        <a href="about.php" class="nav-item nav-link">Acerca</a>
+        <a href="index.php" class="nav-item nav-link">Inicio</a>
+        <a href="about.php" class="nav-item nav-link active">Acerca</a>
         <a href="menu.php" class="nav-item nav-link">Menú</a>
         <a href="contact.php" class="nav-item nav-link">Contacto</a>
         <?php
@@ -103,7 +105,7 @@ if (isset($_SESSION['nombre'])) {
             <div class="row">
                 <div class="col-lg-4 py-0 py-lg-5">
                     <h1 class="mb-3">Nuestra Historia</h1>
-                    <h5 class="mb-3">Transformando pasión en dulzura desde 2018</h5>
+                    <h5 class="mb-3">"Transformando pasión en dulzura desde 2018"</h5>
                     <div style="text-align: justify;">
                       <p>Su inicio en 2018 como un pasatiempo en el colegio, BOKDOS ha evolucionado hasta convertirse en un negocio en crecimiento. Lo que comenzó como una pasión personal por la repostería se ha transformado en un emprendimiento que ofrece deliciosos brownies, galletas y dulces artesanales. Con dedicación y amor por el arte culinario, hemos logrado conquistar a nuestros clientes y expandir nuestras operaciones.</p>
                     </div>
@@ -174,7 +176,7 @@ if (isset($_SESSION['nombre'])) {
             </div>
         </div>
         <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">BOKDOS</a>. All Rights Reserved.</a></p>
+            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">BOKDOS</a>. Todos los derechos reservados.</a></p>
             <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">ASTRID MARQUINA</a></p>
         </div>
     </div>
