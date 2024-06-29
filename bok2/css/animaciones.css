@@ -20,7 +20,7 @@
       opacity: 1;
     }
   }
-  #tit1, #tit2, #tit3, #tit4, #tit5, #tit6 {
+  #tit1, #tit2, #tit3, #tit4, #tit5, #tit6, #cont1, #titulo2, #cont2, #titulo3, #cont3, #titulo4 {
     animation: slideDown 2s;
 
   }

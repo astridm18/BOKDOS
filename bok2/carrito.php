@@ -178,15 +178,8 @@
     var precioTotalCarrito = document.querySelector('.summary-total');
     var paginationContainer = document.querySelector('.pagination');
 
-    // Simulando el estado del carrito (puedes cambiar esto para probar)
-    var carrito = [
-        { nombre: "Cookie 1", descripcion: "Descripción breve del producto 1.", precio: "$10.00" },
-        { nombre: "Cookie 2", descripcion: "Descripción breve del producto 2.", precio: "$15.00" },
-        { nombre: "Cookie 3", descripcion: "Descripción breve del producto 3.", precio: "$20.00" },
-        { nombre: "Cookie 4", descripcion: "Descripción breve del producto 4.", precio: "$25.00" },
-        { nombre: "Cookie 5", descripcion: "Descripción breve del producto 5.", precio: "$30.00" },
-        { nombre: "Cookie 6", descripcion: "Descripción breve del producto 6.", precio: "$35.00" }
-    ]; // Array con objetos representa productos en el carrito
+    // Estado del carrito (puede comenzar vacío)
+    var carrito = [];
 
     var productosPorPagina = 3;
     var paginaActual = 1;
@@ -276,7 +269,7 @@
             var cantidad = parseInt(input.value);
             var index = parseInt(input.dataset.index); // Obtener índice de producto global
             var precio = parseFloat(carrito[index].precio.replace('$', ''));
-            totalCantidad += carrito.length + cantidad;
+            totalCantidad += cantidad;
             totalPrecio += cantidad * precio;
         });
 
@@ -314,8 +307,23 @@
 
     // Inicializar el carrito
     actualizarCarrito();
-});
 
+    // Añadir producto al carrito
+    function agregarProductoAlCarrito(nombre, descripcion, precio) {
+        carrito.push({ nombre: nombre, descripcion: descripcion, precio: precio });
+        actualizarCarrito();
+    }
+
+    // Escuchar clic en botones "Añadir al carrito"
+    document.querySelectorAll('.add-to-cart').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var nombre = button.dataset.name;
+            var descripcion = button.dataset.description;
+            var precio = button.dataset.price;
+            agregarProductoAlCarrito(nombre, descripcion, precio);
+        });
+    });
+});
     </script>
 
     <!-- Contact Javascript File -->

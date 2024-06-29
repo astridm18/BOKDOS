@@ -24,6 +24,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/animaciones.css" rel="stylesheet">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
@@ -80,8 +81,8 @@ if (isset($_SESSION['nombre'])) {
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header mb-5 position-relative overlay-bottom">
-        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+    <div id = "cont3"class="container-fluid page-header mb-5 position-relative overlay-bottom">
+        <div id = "titulo 4"class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 300px">
             <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Contacto</h1>
             <div class="d-inline-flex mb-lg-5">
                 <p class="m-0 text-white"><a class="text-white" href="">Inicio</a></p>
@@ -94,7 +95,7 @@ if (isset($_SESSION['nombre'])) {
 
 
     <!-- Contact Start -->
-    <div class="container-fluid pt-5">
+    <div  class="container-fluid pt-5">
         <div class="container">
             <div class="section-title">
                 <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contáctanos</h4>
