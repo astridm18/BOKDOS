@@ -110,7 +110,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Classic Cookie</h4>  
-                            <a href="#" onclick="event.preventDefault(); agregarAlCarrito(event, {'nombre':'Classic Cookie', 'descripcion':'Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia crujiente y deliciosa que te transportará a los recuerdos de la infancia.', 'precio':2});">
+                            <a href="#"onclick="agregarAlCarrito('1','Classic Cookie', '2' , 'Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia crujiente y deliciosa que te transportará a los recuerdos de la infancia.')">
                             <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
                             </a>
                         </div>
@@ -125,8 +125,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Monster Cookie</h4>  
-                            <a href="#" onclick="event.preventDefault(); agregarAlCarrito(event, {'nombre':'Monster Cookie', 'descripcion':'Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.', 'precio':3});">
-                <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
+                            <a href="#" onclick="agregarAlCarrito('2' , 'Monster Cookie', '3' ,'Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.')">
             </a>
                         </div>
                         <p class="m-0">Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.</p>
@@ -140,7 +139,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9 ">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Velvet Cookie</h4>  
-                            <a href="#" onclick="event.preventDefault(); agregarAlCarrito(event, {'nombre':'Velvet Cookie', 'descripcion':'Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una experiencia gourmet única.', 'precio':3.5});">
+                            <a href="#" onclick="agregarAlCarrito('3', 'Velvet Cookie', '3.5', 'Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una experiencia gourmet única.')">
                 <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
             </a>
                         </div>
@@ -158,7 +157,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Fudgy Brownie</h4>   
-                            <a href="#" onclick="event.preventDefault(); agregarAlCarrito(event, {'nombre':'Fudgy Brownie', 'descripcion':'Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para los amantes del chocolate.', 'precio':3});">
+                            <a href="#"onclick="agregarAlCarrito('4', 'Fudgy Brownie', '3', 'Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para los amantes del chocolate.')">
                 <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
             </a>
                         </div>
@@ -173,7 +172,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Walnut Brownie</h4>   
-                            <a href="#" onclick="event.preventDefault(); agregarAlCarrito(event, {'nombre':'Walnut Brownie', 'descripcion':'Disfruta de la combinación perfecta de nueces crujientes y chocolate en nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia única para tu paladar.', 'precio':3.5});">
+                            <a href="#"onclick="agregarAlCarrito('5', 'Walnut Brownie', '3.5', 'Disfruta de la combinación perfecta de nueces crujientes y chocolate en nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia única para tu paladar.')">
                 <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
             </a>
                         </div>
@@ -188,7 +187,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Cheesecake Brownie</h4>  
-                            <a href="#" onclick="event.preventDefault(); agregarAlCarrito(event, {'nombre':'Cheesecake Brownie', 'descripcion':'Experimenta la fusión perfecta entre un brownie decadente y un suave cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no querrás perderte.', 'precio':4});">
+                            <a href="#" onclick="agregarAlCarrito('6', 'Cheesecake Brownie', '4', 'Experimenta la fusión perfecta entre un brownie decadente y un suave cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no querrás perderte.')">
                 <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
             </a>
                         </div>
@@ -295,14 +294,26 @@ if (isset($_SESSION['nombre'])) {
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-    // Función para agregar productos al carrito
-    function agregarAlCarrito(event, producto) {
-        event.preventDefault(); // Evita que el enlace cambie de página
-        console.log('Producto agregado:', producto);
+        // Función para agregar productos al carrito
+        function agregarAlCarrito(id, nombre, precio, descripcion) {
+            // Obtener el carrito actual del localStorage
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+            console.log(carrito);
+      // Crear el nuevo producto
+      let producto = {
+        id: id,
+        nombre: nombre,
+        precio: precio,
+        descripcion: descripcion
+      };
 
-        // Aquí puedes agregar más lógica, como guardar el producto en un carrito o mostrar una notificación
-        // Por ejemplo, podrías enviar estos datos a un backend para procesar el pedido.
-    }
+      // Agregar el producto al carrito
+      carrito.push(producto);
+
+      // Guardar el carrito actualizado en el localStorage
+      localStorage.setItem('carrito', JSON.stringify(carrito));
+
+      alert(`${producto.nombre} ha sido agregado al carrito.`);}
 </script>
 
 </body>

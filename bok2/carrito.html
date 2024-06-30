@@ -88,6 +88,7 @@
                     <div class="pagination">
                         <!-- Botones de paginación -->
                     </div>
+                    
                 </div>
     
                 <div class="cart-right-unique">
@@ -169,17 +170,15 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script>
-    
-    document.addEventListener('DOMContentLoaded', function () {
-    var cartItems = document.querySelector('.cart-items-unique');
-    var emptyCartMessage = document.querySelector('.empty-cart-message');
-    var carTotalAmount = document.querySelector('.total-items');
-    var resumenTotalAumount = document.querySelector('.summary-items');
-    var precioTotalCarrito = document.querySelector('.summary-total');
-    var paginationContainer = document.querySelector('.pagination');
-
-    // Estado del carrito (puede comenzar vacío)
-    var carrito = [];
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            var cartItems = document.querySelector('.cart-items-unique');
+            var emptyCartMessage = document.querySelector('.empty-cart-message');
+            var carTotalAmount = document.querySelector('.total-items');
+            var resumenTotalAumount = document.querySelector('.summary-items');
+            var precioTotalCarrito = document.querySelector('.summary-total');
+            var paginationContainer = document.querySelector('.pagination');
+            var carrito = JSON.parse(localStorage.getItem('carrito')) || []; 
 
     var productosPorPagina = 3;
     var paginaActual = 1;
@@ -219,7 +218,7 @@
 
                 var productPrice = document.createElement('span');
                 productPrice.classList.add('item-price-unique');
-                productPrice.textContent = producto.precio;
+                productPrice.textContent = producto.precio + ' $';
 
                 productDetails.appendChild(productName);
                 productDetails.appendChild(productDescription);
@@ -269,7 +268,7 @@
             var cantidad = parseInt(input.value);
             var index = parseInt(input.dataset.index); // Obtener índice de producto global
             var precio = parseFloat(carrito[index].precio.replace('$', ''));
-            totalCantidad += cantidad;
+            totalCantidad += carrito.length + cantidad;
             totalPrecio += cantidad * precio;
         });
 
@@ -305,24 +304,14 @@
         actualizarPaginacion();
     }
 
+    function reiniciarCarrito() {
+      // Vaciar el carrito en el localStorage
+      localStorage.removeItem('carrito');
+      console.log('El carrito ha sido reiniciado.');
+    }
     // Inicializar el carrito
     actualizarCarrito();
-
-    // Añadir producto al carrito
-    function agregarProductoAlCarrito(nombre, descripcion, precio) {
-        carrito.push({ nombre: nombre, descripcion: descripcion, precio: precio });
-        actualizarCarrito();
-    }
-
-    // Escuchar clic en botones "Añadir al carrito"
-    document.querySelectorAll('.add-to-cart').forEach(function(button) {
-        button.addEventListener('click', function() {
-            var nombre = button.dataset.name;
-            var descripcion = button.dataset.description;
-            var precio = button.dataset.price;
-            agregarProductoAlCarrito(nombre, descripcion, precio);
-        });
-    });
+  
 });
     </script>
 
