@@ -106,7 +106,7 @@ if (isset($_SESSION['nombre'])) {
             <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menú y Precios</h4>
             <h1 class="display-4">Bokdos </h1>
             <div class="d-inline-block mt-4">
-                <a href="carrito.html">
+                <a href="carrito.php">
                     <button class="btn btn-primary btn-lg shadow rounded-pill" style="background-color: #DA9F5B; ; ">
                         <i class="fas fa-shopping-cart fa-lg"></i>
                         <span class="text-uppercase">Ver mi carrito</span>
@@ -126,9 +126,9 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Classic Cookie</h4>  
-                            <a href="#" data-toggle="modal" data-target="#modalAddToCart" onclick="agregarAlCarrito('1','Classic Cookie', '2' , 'Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia crujiente y deliciosa que te transportará a los recuerdos de la infancia.')">
-                            <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
-                            </a>
+                            <a href="#" data-toggle="modal" data-target="#modalAddToCart" onclick="agregarAlCarrito('1', 'Classic Cookie', '2', 'Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia crujiente y deliciosa que te transportará a los recuerdos de la infancia.', 'img/Galleta1.jpg')">
+    <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+</a>
                         </div>
                         <p class="m-0">Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia crujiente y deliciosa que te transportará a los recuerdos de la infancia.</p>
                     </div>
@@ -141,7 +141,8 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Monster Cookie</h4>  
-                            <a href="#"  data-toggle="modal" data-target="#modalAddToCart" onclick="agregarAlCarrito('2' , 'Monster Cookie', '3' ,'Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.')">
+                            <a href="#"  data-toggle="modal" data-target="#modalAddToCart" onclick="agregarAlCarrito('2' , 'Monster Cookie', '3' ,'Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.', 'img/galleta2.jpg')">
+                            <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
             </a>
                         </div>
                         <p class="m-0">Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.</p>
@@ -155,7 +156,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9 ">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Velvet Cookie</h4>  
-                            <a href="#"  data-toggle="modal" data-target="#modalAddToCart" onclick="agregarAlCarrito('3', 'Velvet Cookie', '3.5', 'Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una experiencia gourmet única.')">
+                            <a href="#"  data-toggle="modal" data-target="#modalAddToCart" onclick="agregarAlCarrito('3', 'Velvet Cookie', '3.5', 'Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una experiencia gourmet única.', 'img/galleta3.jpg')">
                                 <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
                             </a>
                         </div>
@@ -173,7 +174,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Fudgy Brownie</h4>   
-                            <a href="#"  data-toggle="modal" data-target="#modalAddToCart"  onclick="agregarAlCarrito('4', 'Fudgy Brownie', '3', 'Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para los amantes del chocolate.')">
+                            <a href="#"  data-toggle="modal" data-target="#modalAddToCart"  onclick="agregarAlCarrito('4', 'Fudgy Brownie', '3', 'Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para los amantes del chocolate.', 'img/brownie1.jpg')">
                 <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
             </a>
                         </div>
@@ -188,7 +189,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Walnut Brownie</h4>   
-                            <a href="#"  data-toggle="modal" data-target="#modalAddToCart" onclick="agregarAlCarrito('5', 'Walnut Brownie', '3.5', 'Disfruta de la combinación perfecta de nueces crujientes y chocolate en nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia única para tu paladar.')">
+                            <a href="#"  data-toggle="modal" data-target="#modalAddToCart" onclick="agregarAlCarrito('5', 'Walnut Brownie', '3.5', 'Disfruta de la combinación perfecta de nueces crujientes y chocolate en nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia única para tu paladar.', 'img/brownie2.jpg')">
                 <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
             </a>
                         </div>
@@ -203,7 +204,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Cheesecake Brownie</h4>  
-                            <a href="#"  data-toggle="modal" data-target="#modalAddToCart" onclick="agregarAlCarrito('6', 'Cheesecake Brownie', '4', 'Experimenta la fusión perfecta entre un brownie decadente y un suave cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no querrás perderte.')">
+                            <a href="#"  data-toggle="modal" data-target="#modalAddToCart" onclick="agregarAlCarrito('6', 'Cheesecake Brownie', '4', 'Experimenta la fusión perfecta entre un brownie decadente y un suave cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no querrás perderte.', 'img/brownie3.jpg')">
                 <i class="fas fa-shopping-cart text-primary fa-2x"></i> 
             </a>
                         </div>
@@ -232,8 +233,8 @@ if (isset($_SESSION['nombre'])) {
                 <div class="d-flex justify-content-start">
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.instagram.com/bokdos_1?igsh=MWczeTN1eXA3d3pu&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://wa.link/ety2lt"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -310,26 +311,26 @@ if (isset($_SESSION['nombre'])) {
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-        // Función para agregar productos al carrito
-        function agregarAlCarrito(id, nombre, precio, descripcion) {
-            // Obtener el carrito actual del localStorage
-            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-            console.log(carrito);
-      // Crear el nuevo producto
-      let producto = {
+       function agregarAlCarrito(id, nombre, precio, descripcion, imagen) {
+    // Obtener el carrito actual del localStorage
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    // Crear el nuevo producto
+    let producto = {
         id: id,
         nombre: nombre,
         precio: precio,
-        descripcion: descripcion
-      };
+        descripcion: descripcion,
+        imagen: imagen
+    };
 
-      // Agregar el producto al carrito
-      carrito.push(producto);
+    // Agregar el producto al carrito
+    carrito.push(producto);
 
-      // Guardar el carrito actualizado en el localStorage
-      localStorage.setItem('carrito', JSON.stringify(carrito));
+    // Guardar el carrito actualizado en el localStorage
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
 
-      }
 </script>
 
 </body>

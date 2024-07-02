@@ -189,7 +189,7 @@ if (isset($_SESSION['nombre'])) {
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
                         <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-1.jpg" alt="">
+                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-5.jpg" alt="">
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-truck service-icon"></i>Alta Calidad</h4>
@@ -200,7 +200,7 @@ if (isset($_SESSION['nombre'])) {
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
                         <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-2.jpg" alt="">
+                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-7.jpg" alt="">
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-coffee service-icon"></i>Productos Artesanales</h4>
@@ -212,7 +212,7 @@ if (isset($_SESSION['nombre'])) {
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
                         <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-3.jpg" alt="">
+                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-6.jpg" alt="">
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-award service-icon"></i>Personalización y Creatividad</h4>
@@ -224,7 +224,7 @@ if (isset($_SESSION['nombre'])) {
                 <div class="col-lg-6 mb-5">
                     <div class="row align-items-center">
                         <div class="col-sm-5">
-                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-4.jpg" alt="">
+                            <img class="img-fluid mb-3 mb-sm-0" src="img/service-8.jpg" alt="">
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-table service-icon"></i>Asesoría Garantizada</h4>
@@ -328,7 +328,8 @@ if (isset($_SESSION['nombre'])) {
                 <div class="d-flex justify-content-start">
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="https://www.instagram.com/bokdos_1?igsh=MWczeTN1eXA3d3pu&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.instagram.com/bokdos_1?igsh=MWczeTN1eXA3d3pu&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://wa.link/ety2lt"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">

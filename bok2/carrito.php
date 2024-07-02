@@ -33,34 +33,59 @@
    
    </style>
 <body>
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0 nav-bar">
+  
+<div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
             <a href="index.html" class="navbar-brand px-lg-4 m-0">
-                <h1 style= "font-family:monoton; font-weight: 70 !important" class="m-0 display-4 text-uppercase text-white">BOKDOS</h1>
+                <h1 style= "font-family:monoton; font-weight: 70 !important" class="m-0 display-4 text-uppercase text-white">BO
+                    <span class="larger-k">K</span>
+                    DOS
+                </h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto p-4">
-                    <a href="index.php" class="nav-item nav-link active">Inicio</a>
-                    <a href="about.php" class="nav-item nav-link">Acerca</a>
-                    <a href="menu.php" class="nav-item nav-link">Menú</a>
-                    <a href="contact.php" class="nav-item nav-link">Contacto</a>
-                    <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
-                        <i class="fas fa-user"></i> Registro
-                    </a>
-                </div>
-            </div>
-        </nav>
+            <?php
+session_start();
+if (isset($_SESSION['nombre'])) {
+    $nombre = $_SESSION['nombre'];
+}
+?>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+    <div class="navbar-nav ml-auto p-4">
+        <a href="index.php" class="nav-item nav-link">Inicio</a>
+        <a href="about.php" class="nav-item nav-link">Acerca</a>
+        <a href="menu.php" class="nav-item nav-link active">Menú</a>
+        <a href="contact.php" class="nav-item nav-link">Contacto</a>
+        <?php
+        if (isset($nombre)) {
+        ?>
+            <a href="#" class="nav-item nav-link">
+                <i class="fas fa-user"></i> 
+                <?php echo $nombre; ?>
+            </a>
+            <a href="logout.php" class="nav-item nav-link">
+                <i class="fas fa-sign-out-alt"></i> 
+            </a>
+        <?php
+        } else {
+        ?>
+            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
+                <i class="fas fa-user"></i> Registro
+            </a>
+        <?php
+        }
+        ?>
     </div>
+</div>
+</nav>
+</div>         
     <!-- Navbar End -->
 
 
     <!-- Page Header Start -->
     <div id="gotas" class="container-fluid page-header mb-5 position-relative overlay-bottom">
-        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 300px">
             <h1 id="titulo" class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Carrito de compras</h1>
             <div class="d-inline-flex mb-lg-5">
                 <p class="m-0 text-white"><a class="text-white" href="">Inicio</a></p>
@@ -96,7 +121,7 @@
                         <h3 class="summary-title-unique">Resumen de la Compra</h3>
                         <p class="summary-item-unique">Cantidad de artículos: <span class="summary-items" id="summary-items"></span></p>
                         <p class="summary-item-unique">Precio total: <span class="summary-total" id="summary-total"></span></p>
-                        <button class="checkout-btn-unique">Comprar</button>
+                        <button href="paypal.php" class="checkout-btn-unique">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -122,8 +147,8 @@
                 <div class="d-flex justify-content-start">
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.instagram.com/bokdos_1?igsh=MWczeTN1eXA3d3pu&utm_source=qr"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://wa.link/ety2lt"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -201,7 +226,7 @@
                 productCard.classList.add('cart-item-unique');
 
                 var productImage = document.createElement('img');
-                productImage.src = "https://via.placeholder.com/150";
+                productImage.src = producto.imagen;
                 productImage.alt = producto.nombre;
                 productImage.classList.add('item-image-unique');
 
@@ -239,12 +264,12 @@
                 var deleteButton = document.createElement('button');
                 deleteButton.classList.add('delete-btn-unique');
                 deleteButton.textContent = 'Eliminar';
-
                 // Añadir evento de clic al botón de eliminar
                 deleteButton.addEventListener('click', function() {
-                    carrito.splice((pagina - 1) * productosPorPagina + index, 1); // Eliminar el producto del array
-                    actualizarCarrito(); // Actualizar el DOM
-                });
+                    var index = (paginaActual - 1) * productosPorPagina + Array.from(cartItems.children).indexOf(this.parentNode);
+                    carrito.splice(index, 1); // Eliminar el producto del array
+                     actualizarCarrito(); // Actualizar el DOM y el localStorage
+});
 
                 productActions.appendChild(deleteButton);
 
@@ -302,6 +327,7 @@
         totalPaginas = Math.ceil(carrito.length / productosPorPagina);
         mostrarPagina(paginaActual);
         actualizarPaginacion();
+        localStorage.setItem('carrito', JSON.stringify(carrito));
     }
 
     function reiniciarCarrito() {
@@ -314,6 +340,7 @@
   
 });
     </script>
+ 
 
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
