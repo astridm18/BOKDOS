@@ -100,6 +100,7 @@ if (isset($_SESSION['nombre'])) {
                                 <button class="btn btn-white slide-up">
                                 <a href="carrito.php">
     <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+    <span class="badge badge-danger" id="cart-count">0</span>
 </a>
                                 </button>
                             </div>

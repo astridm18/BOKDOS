@@ -127,7 +127,6 @@ if (isset($_SESSION['nombre'])) {
         <p class="summary-item-unique">Precio total: <span class="summary-total" id="summary-total"></span></p>
         <div id="payment-form-container" ></div>
     <form id="payment-form">
-        <div id="card-element"></div>
         <button class="checkout-btn-unique" data-toggle="modal" data-target="#paymentModal">Pagar con Stripe</button>
     </form>
 </div>
@@ -151,6 +150,7 @@ if (isset($_SESSION['nombre'])) {
                         <label for="card-element">Número de tarjeta</label>
                         <div id="card-element"></div>
                     </div>
+                     <!-- 
                     <div class="form-group">
                         <label for="card-expiry">Fecha de vencimiento</label>
                         <div id="card-expiry"></div>
@@ -159,6 +159,7 @@ if (isset($_SESSION['nombre'])) {
                         <label for="card-cvc">CVC</label>
                         <div id="card-cvc"></div>
                     </div>
+                     -->
                     <button type="submit" class="btn btn-primary btn-block">Pagar</button>
                 </form>
             </div>
@@ -214,7 +215,7 @@ if (isset($_SESSION['nombre'])) {
             <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">ASTRID MARQUINA</a></p>
         </div>
     </div>
-    <!-- Footer End -->
+     <!--Footer End -->
 
 
     <!-- Back to Top -->
@@ -364,6 +365,7 @@ if (isset($_SESSION['nombre'])) {
         mostrarPagina(paginaActual);
         actualizarPaginacion();
         localStorage.setItem('carrito', JSON.stringify(carrito));
+        
     }
 
     function reiniciarCarrito() {
