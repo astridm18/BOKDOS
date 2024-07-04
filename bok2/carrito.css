@@ -153,4 +153,15 @@
   
 /*### Animación 2: Desplazamiento desde abajo (Slide Up)*/
 
+#payment-form-container {
+  display: none;
+  margin-top: 20px;
+}
+
+#card-element {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 

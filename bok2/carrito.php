@@ -27,6 +27,8 @@
     <link href="css/style.min.css" rel="stylesheet">
     <link href="carrito.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
+    <!-- Pasarela de pagos- stripe -->
+    <script src="https://js.stripe.com/v3/"></script> 
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
@@ -115,21 +117,55 @@ if (isset($_SESSION['nombre'])) {
                     </div>
                     
                 </div>
+                
     
-                <div class="cart-right-unique">
-                    <div class="summary-unique">
-                        <h3 class="summary-title-unique">Resumen de la Compra</h3>
-                        <p class="summary-item-unique">Cantidad de artículos: <span class="summary-items" id="summary-items"></span></p>
-                        <p class="summary-item-unique">Precio total: <span class="summary-total" id="summary-total"></span></p>
-                        <button href="paypal.php" class="checkout-btn-unique">Comprar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+            
+<div class="cart-right-unique">
+    <div class="summary-unique">
+        <h3 class="summary-title-unique">Resumen de la Compra</h3>
+        <p class="summary-item-unique">Cantidad de artículos: <span class="summary-items" id="summary-items"></span></p>
+        <p class="summary-item-unique">Precio total: <span class="summary-total" id="summary-total"></span></p>
+        <div id="payment-form-container" ></div>
+    <form id="payment-form">
+        <div id="card-element"></div>
+        <button class="checkout-btn-unique" data-toggle="modal" data-target="#paymentModal">Pagar con Stripe</button>
+    </form>
+</div>
+
     </main>
     
     
-    
+  <!-- Payment Modal -->
+<div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="paymentModalLabel">Pagar con Stripe</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden = "true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label for="card-element">Número de tarjeta</label>
+                        <div id="card-element"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-expiry">Fecha de vencimiento</label>
+                        <div id="card-expiry"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-cvc">CVC</label>
+                        <div id="card-cvc"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Pagar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- Carrito endt -->
 
     <!-- Footer Start -->
@@ -183,7 +219,7 @@ if (isset($_SESSION['nombre'])) {
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
+    <script src="https://js.stripe.com/v3/"></script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -348,6 +384,48 @@ if (isset($_SESSION['nombre'])) {
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const paymentFormContainer = document.getElementById('payment-form-container');
+        const paymentButton = document.querySelector('.checkout-btn-unique');
+
+        paymentButton.addEventListener('click', () => {
+            initializeStripe();
+        });
+        Copiar
+async function initializeStripe() {
+    const stripe = Stripe('pk_test_51PYK8RRwnsZkyZcB6ZcsBi6vKYXswRSyGxyXyVEQmxzeRt08FOXxgnE3VMpzLICiPtOCbTOZgMCchNph2PD3XWKk001H3gGfnb');
+    const elements = stripe.elements();
+
+    const cardElement = elements.create('card', {
+        style: {
+            base: {
+                fontSize: '16px',
+                color: '#32325d',
+            },
+        },
+    });
+    cardElement.mount('#card-element');
+
+    const form = document.getElementById('payment-form');
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const { token, error } = await stripe.createToken(cardElement);
+        if (error) {
+            // Manejar el error de pago
+            console.error(error);
+        } else {
+            // Enviar el token de tarjeta al backend
+            await processPayment(token.id);
+            $('#paymentModal').modal('hide');
+        }
+    });
+}
+</script>
+
 </body>
 
 </html>
