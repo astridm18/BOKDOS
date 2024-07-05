@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -127,24 +127,24 @@ if (isset($_SESSION['nombre'])) {
                 <div class="col-md-6 pb-5">
                     <div class="contact-form">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <form  action="https://formsubmit.co/astridmarquina188@gmail.com" method="POST">
                             <div class="control-group">
                                 <input type="text" class="form-control bg-transparent p-4" id="name" placeholder="Nombre Completo"
                                     required="required" data-validation-required-message="Please enter your name" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="email" class="form-control bg-transparent p-4" id="email" placeholder="Correo electrónico"
+                                <input type="email"name="email" class="form-control bg-transparent p-4" id="email" placeholder="Correo electrónico"
                                     required="required" data-validation-required-message="Please enter your email" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control bg-transparent p-4" id="subject" placeholder="Asunto"
+                                <input type="subject"name="subject" class="form-control bg-transparent p-4" id="subject" placeholder="Asunto"
                                     required="required" data-validation-required-message="Please enter a subject" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control bg-transparent py-3 px-4" rows="5" id="message" placeholder="Mensaje"
+                                <textarea name = "message" class="form-control bg-transparent py-3 px-4" rows="5" id="message" placeholder="Mensaje"
                                     required="required"
                                     data-validation-required-message="Please enter your message"></textarea>
                                 <p class="help-block text-danger"></p>
@@ -154,6 +154,8 @@ if (isset($_SESSION['nombre'])) {
                                     mensaje
                                 </button>
                             </div>
+                            <input type = "hidden" name= "_next" value ="http://localhost/BOKDOS/bok2/contact.php">
+                            <input type = "hidden" name= "_captcha" value ="false" >
                         </form>
                     </div>
                 </div>
