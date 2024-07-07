@@ -13,7 +13,9 @@
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -27,16 +29,17 @@
     <link href="css/animaciones.css" rel="stylesheet">
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-   </style>
-  
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+</style>
+
 
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="index.html" class="navbar-brand px-lg-4 m-0">
-                <h1 style= "font-family:monoton; font-weight: 70 !important" class="m-0 display-4 text-uppercase text-white">BO
+            <a href="index.php" class="navbar-brand px-lg-4 m-0">
+                <h1 style="font-family:monoton; font-weight: 70 !important"
+                    class="m-0 display-4 text-uppercase text-white">BO
                     <span class="larger-k">K</span>
                     DOS
                 </h1>
@@ -50,42 +53,43 @@ if (isset($_SESSION['nombre'])) {
     $nombre = $_SESSION['nombre'];
 }
 ?>
-      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-    <div class="navbar-nav ml-auto p-4">
-        <a href="index.php" class="nav-item nav-link">Inicio</a>
-        <a href="about.php" class="nav-item nav-link active">Acerca</a>
-        <a href="menu.php" class="nav-item nav-link">Menú</a>
-        <a href="contact.php" class="nav-item nav-link">Contacto</a>
-        <?php
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto p-4">
+                    <a href="index.php" class="nav-item nav-link">Inicio</a>
+                    <a href="about.php" class="nav-item nav-link active">Acerca</a>
+                    <a href="menu.php" class="nav-item nav-link">Menú</a>
+                    <a href="contact.php" class="nav-item nav-link">Contacto</a>
+                    <?php
         if (isset($nombre)) {
         ?>
-            <a href="#" class="nav-item nav-link">
-                <i class="fas fa-user"></i> 
-                <?php echo $nombre; ?>
-            </a>
-            <a href="logout.php" class="nav-item nav-link">
-                <i class="fas fa-sign-out-alt"></i> 
-            </a>
-        <?php
+                    <a href="#" class="nav-item nav-link">
+                        <i class="fas fa-user"></i>
+                        <?php echo $nombre; ?>
+                    </a>
+                    <a href="logout.php" class="nav-item nav-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                    <?php
         } else {
         ?>
-            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
-                <i class="fas fa-user"></i> Registro
-            </a>
-        <?php
+                    <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
+                        <i class="fas fa-user"></i> Registro
+                    </a>
+                    <?php
         }
         ?>
+                </div>
+            </div>
+        </nav>
     </div>
-</div>     
-</nav>
-</div>     
     <!-- Navbar End -->
 
 
     <!-- Page Header Start -->
-    <div id= "cont1" class="container-fluid page-header mb-5 position-relative overlay-bottom">
-        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 300px">
-            <h1 id= "titulo2" class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Acerca de Bokdos</h1>
+    <div id="cont1" class="container-fluid page-header mb-5 position-relative overlay-bottom">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5"
+            style="min-height: 300px">
+            <h1 id="titulo2" class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Acerca de Bokdos</h1>
             <div class="d-inline-flex mb-lg-5">
                 <p class="m-0 text-white"><a class="text-white" href="">Inicio</a></p>
                 <p class="m-0 text-white px-2">/</p>
@@ -108,11 +112,15 @@ if (isset($_SESSION['nombre'])) {
                     <h1 class="mb-3">Nuestra Historia</h1>
                     <h5 class="mb-3">"Transformando pasión en dulzura desde 2018"</h5>
                     <div style="text-align: justify;">
-                      <p>Su inicio en 2018 como un pasatiempo en el colegio, BOKDOS ha evolucionado hasta convertirse en un negocio en crecimiento. Lo que comenzó como una pasión personal por la repostería se ha transformado en un emprendimiento que ofrece deliciosos brownies, galletas y dulces artesanales. Con dedicación y amor por el arte culinario, hemos logrado conquistar a nuestros clientes y expandir nuestras operaciones.</p>
+                        <p>Su inicio en 2018 como un pasatiempo en el colegio, BOKDOS ha evolucionado hasta convertirse
+                            en un negocio en crecimiento. Lo que comenzó como una pasión personal por la repostería se
+                            ha transformado en un emprendimiento que ofrece deliciosos brownies, galletas y dulces
+                            artesanales. Con dedicación y amor por el arte culinario, hemos logrado conquistar a
+                            nuestros clientes y expandir nuestras operaciones.</p>
                     </div>
                     <div class="text-center">
                         <a href="" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Ver más</a>
-</div>
+                    </div>
                 </div>
                 <div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
                     <div class="position-relative h-100">
@@ -122,12 +130,15 @@ if (isset($_SESSION['nombre'])) {
                 <div class="col-lg-4 py-0 py-lg-5">
                     <h1 class="mb-3">Nuestra Visión</h1>
                     <div style="text-align: justify;">
-                    <p>Nos comprometemos a innovar constantemente en nuestras recetas y procesos, manteniendo siempre la esencia de nuestra pasión por la repostería. Queremos expandir nuestras operaciones a nivel nacional y eventualmente internacional, llevando la dulzura y el amor por el arte culinario a todos los rincones del mundo.</p>
-                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Somos Excelencia</h5>
-                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Exquisitez en un bocado</h5>
-                    <div class="text-center">
-                         <a href="menu.php" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Menú</a>
-</div>
+                        <p>Nos comprometemos a innovar constantemente en nuestras recetas y procesos, manteniendo
+                            siempre la esencia de nuestra pasión por la repostería. Queremos expandir nuestras
+                            operaciones a nivel nacional y eventualmente internacional, llevando la dulzura y el amor
+                            por el arte culinario a todos los rincones del mundo.</p>
+                        <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Somos Excelencia</h5>
+                        <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Exquisitez en un bocado</h5>
+                        <div class="text-center">
+                            <a href="menu.php" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Menú</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,10 +159,15 @@ if (isset($_SESSION['nombre'])) {
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Síguenos</h4>
                 <p>Puedes encontrarnos en...</p>
                 <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.instagram.com/bokdos_1?igsh=MWczeTN1eXA3d3pu&utm_source=qr"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://wa.link/ety2lt"><i class="fab fa-whatsapp"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2"
+                        href="https://www.instagram.com/bokdos_1?igsh=MWczeTN1eXA3d3pu&utm_source=qr"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://wa.link/ety2lt"><i
+                            class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -167,8 +183,9 @@ if (isset($_SESSION['nombre'])) {
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Más Información</h4>
                 <p>Déjanos tu correo electrónico y recibirás de lo nuevo de BOKDOS</p>
                 <div class="w-100">
-                <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Correo">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-light" style="padding: 25px;"
+                            placeholder="Correo">
                         <div class="input-group-append">
                             <button class="btn btn-primary font-weight-bold px-3">Registrarse</button>
                         </div>
@@ -176,9 +193,12 @@ if (isset($_SESSION['nombre'])) {
                 </div>
             </div>
         </div>
-        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">BOKDOS</a>. Todos los derechos reservados.</a></p>
-            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">ASTRID MARQUINA</a></p>
+        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5"
+            style="border-color: rgba(256, 256, 256, .1) !important;">
+            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">BOKDOS</a>. Todos los
+                derechos reservados.</a></p>
+            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">ASTRID
+                    MARQUINA</a></p>
         </div>
     </div>
     <!-- Footer End -->
@@ -207,7 +227,8 @@ if (isset($_SESSION['nombre'])) {
 </body>
 
 <!-- Modal Registro -->
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -228,15 +249,17 @@ if (isset($_SESSION['nombre'])) {
                     </div>
                     <div class="form-group">
                         <label for="registerEmail">Correo Electrónico</label>
-                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico">
+                        <input type="email" class="form-control" name="email"
+                            placeholder="Ingrese su correo electrónico">
                     </div>
                     <div class="form-group">
                         <label for="registerPassword">Contraseña</label>
                         <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña">
                     </div>
                     <div class="d-flex flex-column align-items-center">
-                    <button type="submit" class="btn btn-primary mt-4">Registrarse</button>
-                    <p class="terminoa mt-2">¿Ya tienes cuenta? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#registerModal2" class="cambio-mod2">Inicia Sesión</a></p>
+                        <button type="submit" class="btn btn-primary mt-4">Registrarse</button>
+                        <p class="terminoa mt-2">¿Ya tienes cuenta? <a href="#" data-toggle="modal" data-dismiss="modal"
+                                data-target="#registerModal2" class="cambio-mod2">Inicia Sesión</a></p>
                     </div>
                 </form>
 
@@ -245,9 +268,10 @@ if (isset($_SESSION['nombre'])) {
         </div>
     </div>
 </div>
-             
+
 <!--Modal Inicio de sesion  -->
-<div class="modal fade" id="registerModal2" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+<div class="modal fade" id="registerModal2" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -260,7 +284,8 @@ if (isset($_SESSION['nombre'])) {
                 <form id="registerForm" action="login.php" method="POST">
                     <div class="form-group">
                         <label for="registerEmail">Correo Electrónico</label>
-                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico">
+                        <input type="email" class="form-control" name="email"
+                            placeholder="Ingrese su correo electrónico">
                     </div>
                     <div class="form-group">
                         <label for="registerPassword">Contraseña</label>
@@ -268,7 +293,8 @@ if (isset($_SESSION['nombre'])) {
                     </div>
                     <div class="d-flex flex-column align-items-center">
                         <button type="submit" class="btn btn-primary mb-2 mt-4">Iniciar Sesión</button>
-                        <p class="terminoa">¿Primera vez por aquí? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#registerModal" class="cambio-mod">Regístrate</a></p>
+                        <p class="terminoa">¿Primera vez por aquí? <a href="#" data-toggle="modal" data-dismiss="modal"
+                                data-target="#registerModal" class="cambio-mod">Regístrate</a></p>
                     </div>
                 </form>
                 <hr>

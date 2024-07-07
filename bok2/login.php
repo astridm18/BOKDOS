@@ -42,4 +42,3 @@ if ($resultado->num_rows == 1) {
 }
 
 $conn->close();
-

@@ -13,7 +13,9 @@
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -26,17 +28,19 @@
     <link href="css/style.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
     <link href="css/animaciones.css" rel="stylesheet">
-    
+
 </head>
 <style>
- @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 </style>
+
 <body>
     <!-- Navbar Start -->
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3 slide-up">
             <a href="index.html" class="navbar-brand px-lg-4 m-0">
-                <h1 style= "font-family:monoton; font-weight: 70 !important" class="m-0 display-4 text-uppercase text-white">BO
+                <h1 style="font-family:monoton; font-weight: 70 !important"
+                    class="m-0 display-4 text-uppercase text-white">BO
                     <span class="larger-k">K</span>
                     DOS
                 </h1>
@@ -56,33 +60,33 @@ if (isset($_SESSION['nombre'])) {
                     <a href="about.php" class="nav-item nav-link">Acerca</a>
                     <a href="menu.php" class="nav-item nav-link">Menú</a>
                     <a href="contact.php" class="nav-item nav-link">Contacto</a>
-                    <?php      
-            if (isset($nombre)) {
-                ?>
+                    <?php
+        if (isset($nombre)) {
+        ?>
                     <a href="#" class="nav-item nav-link">
-                        <i class="fas fa-user"></i> 
+                        <i class="fas fa-user"></i>
                         <?php echo $nombre; ?>
                     </a>
                     <a href="logout.php" class="nav-item nav-link">
-                        <i class="fas fa-sign-out-alt"></i> 
+                        <i class="fas fa-sign-out-alt"></i>
                     </a>
-                <?php
-               } else { 
-            ?>
-                        <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
+                    <?php
+        } else {
+        ?>
+                    <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
                         <i class="fas fa-user"></i> Registro
                     </a>
                     <?php
-               }
-            ?>
+        }
+        ?>
                 </div>
-            </div>         
+            </div>
         </nav>
         <?php
       
             if (isset($nombre)) {
                 ?>
-         <div class="container-fluid">
+        <div class="container-fluid">
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
@@ -93,77 +97,77 @@ if (isset($_SESSION['nombre'])) {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-lg-1">
                         <div class="input-group">
                             <div class="input-group-append">
                                 <button class="btn btn-white slide-up">
-                                <a href="carrito.php">
-    <i class="fas fa-shopping-cart text-primary fa-2x"></i>
-    <span class="badge badge-danger" id="cart-count">0</span>
-</a>
+                                    <a href="carrito.php">
+                                        <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                        <span class="badge badge-danger" id="cart-count">0</span>
+                                    </a>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-         </div>
-        </div>   
-        <?php
+        </div>
+    </div>
+    <?php
                } else { 
-            ?>  
-              <div class="container-fluid">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Buscar...">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary">Buscar</button>
-                            </div>
+            ?>
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar...">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary">Buscar</button>
                         </div>
                     </div>
-                    
-                    <div class="col-lg-1">
-                        <div class="input-group">
-                            <div class="input-group-append">
-                                <button class="btn btn-white">
-                                <a href="#"  data-toggle="modal" data-target="#registerModal">
-    <i class="fas fa-shopping-cart text-primary fa-2x"></i>
-</a>
-                                </button>
-                            </div>
+                </div>
+
+                <div class="col-lg-1">
+                    <div class="input-group">
+                        <div class="input-group-append">
+                            <button class="btn btn-white">
+                                <a href="#" data-toggle="modal" data-target="#registerModal">
+                                    <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                </a>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-         </div>
-        </div>  
-        <?php
+        </div>
+    </div>
+    </div>
+    <?php
                }
             ?>
     <!-- Navbar End -->
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
-       
+
         <div id="blog-carousel" class="carousel slide overlay-bottom" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="w-100" src="img/brownies2.JPG" alt="Image" width="800" height="800">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h2 id= "tit1" class="text-primary font-weight-medium m-0">Donde el sabor se convierte en</h2>
-                        <h1 id= "tit2"class="display-1 text-white m-0">PLACER</h1>
-                        <h2 id= "tit2"class="text-white m-0"> DESDE 2018 </h2>
+                        <h2 id="tit1" class="text-primary font-weight-medium m-0">Donde el sabor se convierte en</h2>
+                        <h1 id="tit2" class="display-1 text-white m-0">PLACER</h1>
+                        <h2 id="tit2" class="text-white m-0"> DESDE 2018 </h2>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="w-100" src="img/COOKIES.JPG" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <h2 id= "tit4"class="text-primary font-weight-medium m-0">Donde el sabor se convierte en </h2>
-                        <h1 id= "tit5"class="display-1 text-white m-0">SONRISAS</h1>
-                        <h2 id= "tit6"class="text-white m-0"> DESDE 2018 </h2>
+                        <h2 id="tit4" class="text-primary font-weight-medium m-0">Donde el sabor se convierte en </h2>
+                        <h1 id="tit5" class="display-1 text-white m-0">SONRISAS</h1>
+                        <h2 id="tit6" class="text-white m-0"> DESDE 2018 </h2>
                     </div>
                 </div>
             </div>
@@ -194,7 +198,8 @@ if (isset($_SESSION['nombre'])) {
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-truck service-icon"></i>Alta Calidad</h4>
-                            <p class="m-0"> Ingredientes frescos y de primera calidad, lo que garantiza un sabor superior en todos sus productos.</p>
+                            <p class="m-0"> Ingredientes frescos y de primera calidad, lo que garantiza un sabor
+                                superior en todos sus productos.</p>
                         </div>
                     </div>
                 </div>
@@ -205,7 +210,7 @@ if (isset($_SESSION['nombre'])) {
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-coffee service-icon"></i>Productos Artesanales</h4>
-                            <p class="m-0"> 
+                            <p class="m-0">
                                 Personalizamos los productos según las preferencias y necesidades de los clientes.</p>
                         </div>
                     </div>
@@ -217,7 +222,7 @@ if (isset($_SESSION['nombre'])) {
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-award service-icon"></i>Personalización y Creatividad</h4>
-                            <p class="m-0"> Opciones personalizadas para decoraciones y empaques, 
+                            <p class="m-0"> Opciones personalizadas para decoraciones y empaques,
                                 lo que permite que los productos sean únicos y especiales para cada ocasión.</p>
                         </div>
                     </div>
@@ -229,8 +234,9 @@ if (isset($_SESSION['nombre'])) {
                         </div>
                         <div class="col-sm-7">
                             <h4><i class="fa fa-table service-icon"></i>Asesoría Garantizada</h4>
-                            <p class="m-0">Nuestro experto equipo está disponible en línea para proporcionar recomendaciones
-                                 y asegurar una experiencia de compra satisfactoria.</p>
+                            <p class="m-0">Nuestro experto equipo está disponible en línea para proporcionar
+                                recomendaciones
+                                y asegurar una experiencia de compra satisfactoria.</p>
                         </div>
                     </div>
                 </div>
@@ -276,7 +282,8 @@ if (isset($_SESSION['nombre'])) {
                             <i>Diseñador Gráfico</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem.
+                        Dolor tempor ipsum sanct clita</p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
@@ -286,7 +293,8 @@ if (isset($_SESSION['nombre'])) {
                             <i>Administrador</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem.
+                        Dolor tempor ipsum sanct clita</p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
@@ -296,7 +304,8 @@ if (isset($_SESSION['nombre'])) {
                             <i>Administrador Comercial</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem.
+                        Dolor tempor ipsum sanct clita</p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
@@ -306,7 +315,8 @@ if (isset($_SESSION['nombre'])) {
                             <i>xd</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem.
+                        Dolor tempor ipsum sanct clita</p>
                 </div>
             </div>
         </div>
@@ -327,10 +337,15 @@ if (isset($_SESSION['nombre'])) {
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Síguenos</h4>
                 <p>Puedes encontrarnos en...</p>
                 <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.instagram.com/bokdos_1?igsh=MWczeTN1eXA3d3pu&utm_source=qr"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://wa.link/ety2lt"><i class="fab fa-whatsapp"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2"
+                        href="https://www.instagram.com/bokdos_1?igsh=MWczeTN1eXA3d3pu&utm_source=qr"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://wa.link/ety2lt"><i
+                            class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -347,7 +362,8 @@ if (isset($_SESSION['nombre'])) {
                 <p>Déjanos tu correo electrónico y recibirás de lo nuevo de BOKDOS</p>
                 <div class="w-100">
                     <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Correo">
+                        <input type="text" class="form-control border-light" style="padding: 25px;"
+                            placeholder="Correo">
                         <div class="input-group-append">
                             <button class="btn btn-primary font-weight-bold px-3">Registrarse</button>
                         </div>
@@ -355,9 +371,12 @@ if (isset($_SESSION['nombre'])) {
                 </div>
             </div>
         </div>
-        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">BOKDOS</a>. Todos los derechos reservados.</a></p>
-            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">ASTRID MARQUINA</a></p>
+        <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5"
+            style="border-color: rgba(256, 256, 256, .1) !important;">
+            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">BOKDOS</a>. Todos los
+                derechos reservados.</a></p>
+            <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">ASTRID
+                    MARQUINA</a></p>
         </div>
     </div>
     <!-- Footer End -->
@@ -386,7 +405,8 @@ if (isset($_SESSION['nombre'])) {
 </body>
 
 <!-- Modal Registro -->
- <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -407,15 +427,17 @@ if (isset($_SESSION['nombre'])) {
                     </div>
                     <div class="form-group">
                         <label for="registerEmail">Correo Electrónico</label>
-                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico">
+                        <input type="email" class="form-control" name="email"
+                            placeholder="Ingrese su correo electrónico">
                     </div>
                     <div class="form-group">
                         <label for="registerPassword">Contraseña</label>
                         <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña">
                     </div>
                     <div class="d-flex flex-column align-items-center">
-                    <button type="submit" class="btn btn-primary mt-4">Registrarse</button>
-                    <p class="terminoa mt-2">¿Ya tienes cuenta? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#registerModal2" class="cambio-mod2">Inicia Sesión</a></p>
+                        <button type="submit" class="btn btn-primary mt-4">Registrarse</button>
+                        <p class="terminoa mt-2">¿Ya tienes cuenta? <a href="#" data-toggle="modal" data-dismiss="modal"
+                                data-target="#registerModal2" class="cambio-mod2">Inicia Sesión</a></p>
                     </div>
                 </form>
 
@@ -424,9 +446,10 @@ if (isset($_SESSION['nombre'])) {
         </div>
     </div>
 </div>
-             
+
 <!--Modal Inicio de sesion  -->
-<div class="modal fade" id="registerModal2" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+<div class="modal fade" id="registerModal2" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -439,7 +462,8 @@ if (isset($_SESSION['nombre'])) {
                 <form id="registerForm" action="login.php" method="POST">
                     <div class="form-group">
                         <label for="registerEmail">Correo Electrónico</label>
-                        <input type="email" class="form-control" name="email" placeholder="Ingrese su correo electrónico">
+                        <input type="email" class="form-control" name="email"
+                            placeholder="Ingrese su correo electrónico">
                     </div>
                     <div class="form-group">
                         <label for="registerPassword">Contraseña</label>
@@ -447,7 +471,8 @@ if (isset($_SESSION['nombre'])) {
                     </div>
                     <div class="d-flex flex-column align-items-center">
                         <button type="submit" class="btn btn-primary mb-2 mt-4">Iniciar Sesión</button>
-                        <p class="terminoa">¿Primera vez por aquí? <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#registerModal" class="cambio-mod">Regístrate</a></p>
+                        <p class="terminoa">¿Primera vez por aquí? <a href="#" data-toggle="modal" data-dismiss="modal"
+                                data-target="#registerModal" class="cambio-mod">Regístrate</a></p>
                     </div>
                 </form>
                 <hr>
@@ -457,4 +482,5 @@ if (isset($_SESSION['nombre'])) {
 </div>
 
 <!--Modal Inicio de sesion -->
+
 </html>
