@@ -102,21 +102,27 @@
     border-radius: 5px;
     text-align: center;
   }
-  
   .delete-btn-unique {
     padding: 5px 10px;
-    background-color: #ff4d4d;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    background-color: transparent; /* Fondo transparente */
+    color: #ff1a1a; /* Color del icono (rojo) */
+    border: none; /* Sin borde */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+    font-size: 0; /* Oculta el texto del botón */
+  }
+  
+  .delete-btn-unique:before {
+    content: "\f2ed"; /* Código Unicode del icono de papelera */
+    font-family: "Font Awesome 5 Free"; /* Fuente de los iconos Font Awesome */
+    font-weight: 900; /* Peso de la fuente */
+    font-size: 16px;
+    color: #ff0000; /* Color rojo */
   }
   
   .delete-btn-unique:hover {
-    background-color: #ff1a1a;
+    color: #b30000; /* Cambio de color al pasar el cursor (rojo más oscuro) */
   }
-  
   .summary-unique {
     text-align: center;
   }

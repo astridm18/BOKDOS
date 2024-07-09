@@ -46,7 +46,7 @@
             <a href="php/index.php" class="navbar-brand px-lg-4 m-0">
                 <h1 style="font-family:monoton; font-weight: 70 !important"
                     class="m-0 display-4 text-uppercase text-white">BO
-                    <span class="larger-k">K</span>
+                    <span style="font-size: 74px; position: relative; top: 7px;" class="larger-k-logo">K</span>
                     DOS
                 </h1>
             </a>

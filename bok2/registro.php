@@ -33,7 +33,7 @@ if ($conn->query($sql) === true) {
     $_SESSION['correo'] = $correos;
 
 
-    header('Location: php/index.php');
+    header('Location: index.php');
     exit;
 } else {
     echo "Error en conexión: " . $conn->error;

@@ -1,35 +1,47 @@
-paypal
-    .Buttons({
-        // Set up the transaction
-        createOrder: function(data, actions) {
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: '0.01', // Replace with the actual amount
-                    },
-                }, ],
-            });
-        },
+// Vaciar el carrito en el localStorage
+function reiniciarCarrito() {
+    localStorage.removeItem('carrito'); //esta linea remueve la tabla carrito del localstorage, por ende, lo vacia, CLARO, por eso cuando se coloco en crear orden iniciaba la pagina sin productos
+    console.log('El carrito ha sido reiniciado.');
+}
 
-        // Finalize the transaction
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(details) {
-                // Show a success message to the buyer
-                alert(
-                    'Transaction completed by ' + details.payer.name.given_name + '!'
-                );
-            });
-        },
-        style: {
-            color: 'blue',
-            shape: 'pill'
+const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    console.log(carrito);
+        // Mostrar la cantidad de productos en el span
 
-        }
-    })
+        // Calcular totalPrecio
+        let totalPrecio = carrito.reduce((sum, producto) => sum + parseFloat(producto.precio.replace('$', '')), 0);
 
-    .render('#paypal-button-container');
+        // Configurar los botones de PayPal después de calcular totalPrecio
+        paypal.Buttons({
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: totalPrecio.toFixed(2), // Usar totalPrecio
+                        },
+                    }],
+                });
+            },
 
-
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                reiniciarCarrito()
+                window.location.reload()
+                return actions.order.capture().then(function(details) {
+                    // Vacia el carrito en el localstorage
+                    localStorage.removeItem('carrito');
+                    console.log('El carrito ha sido reiniciado.');
+                    // Show a success message to the buyer
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            },
+            style: {
+                color: 'blue',
+                shape: 'pill'
+            }
+        }).render('#paypal-button-container');
+console.log(totalPrecio);
 document.addEventListener('DOMContentLoaded', function() {
     var cartItems = document.querySelector('.cart-items-unique');
     var emptyCartMessage = document.querySelector('.empty-cart-message');
@@ -122,8 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function actualizarTotales() {
         var totalCantidad = 0;
-        var totalPrecio = 0;
-
         document.querySelectorAll('.item-quantity-unique').forEach(function(input) {
             var cantidad = parseInt(input.value);
             var index = parseInt(input.dataset.index); // Obtener índice de producto global
@@ -166,12 +176,9 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('carrito', JSON.stringify(carrito));
 
     }
+   
 
-    function reiniciarCarrito() {
-        // Vaciar el carrito en el localStorage
-        localStorage.removeItem('carrito');
-        console.log('El carrito ha sido reiniciado.');
-    }
+   
     // Inicializar el carrito
     actualizarCarrito();
 

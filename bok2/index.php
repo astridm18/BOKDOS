@@ -41,7 +41,7 @@
             <a href="index.html" class="navbar-brand px-lg-4 m-0">
                 <h1 style="font-family:monoton; font-weight: 70 !important"
                     class="m-0 display-4 text-uppercase text-white">BO
-                    <span class="larger-k">K</span>
+                    <span style="font-size: 74px; position: relative; top: 7px;" class="larger-k-logo">K</span>
                     DOS
                 </h1>
             </a>
@@ -282,19 +282,20 @@ if (isset($_SESSION['nombre'])) {
                             <i>Diseñador Gráfico</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem.
-                        Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">"BOKDOS ha llevado los dulces a otro nivel. ¡La calidad y el sabor son
+                        impresionantes!"</p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/testimonial-2.jpg" alt="">
                         <div class="ml-3">
                             <h4>Ingrid Medina</h4>
-                            <i>Administrador</i>
+                            <i>Contador Público</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem.
-                        Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">"Los dulces de BOKDOS son una delicia inigualable, cada bocado es una experiencia
+                        celestial."
+                    </p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
@@ -304,19 +305,19 @@ if (isset($_SESSION['nombre'])) {
                             <i>Administrador Comercial</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem.
-                        Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">"¡Los brownies y galletas de BOKDOS son simplemente perfectos! Su sabor es
+                        insuperable."</p>
                 </div>
                 <div class="testimonial-item">
                     <div class="d-flex align-items-center mb-3">
                         <img class="img-fluid" src="img/testimonial-4.jpg" alt="">
                         <div class="ml-3">
                             <h4>Lony Rojas</h4>
-                            <i>xd</i>
+                            <i>Publicista</i>
                         </div>
                     </div>
-                    <p class="m-0">Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem.
-                        Dolor tempor ipsum sanct clita</p>
+                    <p class="m-0">"Las galletas y brownies de BOKDOS son una maravilla. ¡Nunca había probado algo tan
+                        divino!"</p>
                 </div>
             </div>
         </div>
@@ -482,5 +483,12 @@ if (isset($_SESSION['nombre'])) {
 </div>
 
 <!--Modal Inicio de sesion -->
+<script>
+// Leer el carrito del localStorage
+const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+// Mostrar la cantidad de productos en el span
+document.getElementById('cart-count').textContent = carrito.length;
+</script>
 
 </html>

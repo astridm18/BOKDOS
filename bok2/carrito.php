@@ -27,7 +27,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
-    <link href="carrito.css" rel="stylesheet">
+    <link href="css/carrito.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
     <!-- Pasarela de pagos- stripe -->
     <script src="https://js.stripe.com/v3/"></script>
@@ -46,7 +46,7 @@
             <a href="php/index.php" class="navbar-brand px-lg-4 m-0">
                 <h1 style="font-family:monoton; font-weight: 70 !important"
                     class="m-0 display-4 text-uppercase text-white">BO
-                    <span class="larger-k">K</span>
+                    <span style="font-size: 74px; position: relative; top: 7px;" class="larger-k-logo">K</span>
                     DOS
                 </h1>
             </a>
@@ -54,11 +54,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <?php
-session_start();
-if (isset($_SESSION['nombre'])) {
-    $nombre = $_SESSION['nombre'];
-}
-?>
+            session_start();
+            if (isset($_SESSION['nombre'])) {
+                $nombre = $_SESSION['nombre'];
+            }
+            ?>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto p-4">
                     <a href="index.php" class="nav-item nav-link">Inicio</a>
@@ -66,8 +66,8 @@ if (isset($_SESSION['nombre'])) {
                     <a href="menu.php" class="nav-item nav-link">Menú</a>
                     <a href="contact.php" class="nav-item nav-link">Contacto</a>
                     <?php
-        if (isset($nombre)) {
-        ?>
+                    if (isset($nombre)) {
+                        ?>
                     <a href="#" class="nav-item nav-link">
                         <i class="fas fa-user"></i>
                         <?php echo $nombre; ?>
@@ -76,14 +76,14 @@ if (isset($_SESSION['nombre'])) {
                         <i class="fas fa-sign-out-alt"></i>
                     </a>
                     <?php
-        } else {
-        ?>
+                    } else {
+                        ?>
                     <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
                         <i class="fas fa-user"></i> Registro
                     </a>
                     <?php
-        }
-        ?>
+                    }
+                    ?>
                 </div>
             </div>
         </nav>
@@ -111,7 +111,7 @@ if (isset($_SESSION['nombre'])) {
         <div class="container-unique">
             <div class="cart-container-unique">
                 <div class="cart-left-unique">
-                    <h2 class="cart-title-unique">Carrito (<span class="total-items" id="total-items">2</span>
+                    <h2 class="cart-title-unique">Carrito (<span class="total-items" id="total-items">0</span>
                         artículos)</h2>
                     <div class="cart-items-unique">
 
