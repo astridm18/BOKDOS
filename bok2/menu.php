@@ -19,7 +19,7 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
@@ -27,7 +27,15 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
     <link href="css/animaciones.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+<style>
+.swal2-confirm {
+    background-color: #33211D !important;
+    /* Cambia el color de fondo */
+
+}
+</style>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
@@ -54,11 +62,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <?php
-session_start();
-if (isset($_SESSION['nombre'])) {
-    $nombre = $_SESSION['nombre'];
-}
-?>
+            session_start();
+            if (isset($_SESSION['nombre'])) {
+                $nombre = $_SESSION['nombre'];
+            }
+            ?>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto p-4">
                     <a href="index.php" class="nav-item nav-link">Inicio</a>
@@ -66,8 +74,8 @@ if (isset($_SESSION['nombre'])) {
                     <a href="menu.php" class="nav-item nav-link active">Menú</a>
                     <a href="contact.php" class="nav-item nav-link">Contacto</a>
                     <?php
-        if (isset($nombre)) {
-        ?>
+                    if (isset($nombre)) {
+                        ?>
                     <a href="#" class="nav-item nav-link">
                         <i class="fas fa-user"></i>
                         <?php echo $nombre; ?>
@@ -76,23 +84,22 @@ if (isset($_SESSION['nombre'])) {
                         <i class="fas fa-sign-out-alt"></i>
                     </a>
                     <?php
-        } else {
-        ?>
+                    } else {
+                        ?>
                     <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
                         <i class="fas fa-user"></i> Registro
                     </a>
                     <?php
-        }
-        ?>
+                    }
+                    ?>
                 </div>
             </div>
         </nav>
     </div>
     <!-- Navbar End -->
 
-
     <!-- Page Header Start -->
-    <div id="cont2" class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div id="cont2" class="container-fluid page-header mb-3 position-relative overlay-bottom">
         <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5"
             style="min-height: 300px">
             <h1 id="titulo3" class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Menú</h1>
@@ -105,7 +112,7 @@ if (isset($_SESSION['nombre'])) {
     </div>
     <!-- Page Header End -->
 
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5 ">
         <div class="container">
             <div class="section-title">
                 <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menú y Precios</h4>
@@ -131,8 +138,8 @@ if (isset($_SESSION['nombre'])) {
                         </div>
 
                         <?php
-        if (isset($nombre)) {
-        ?>
+                        if (isset($nombre)) {
+                            ?>
                         <div class="col-8 col-sm-9">
                             <div class="d-flex justify-content-between mr-2">
                                 <h4>Classic Cookie</h4>
@@ -239,12 +246,12 @@ if (isset($_SESSION['nombre'])) {
                         </div>
                     </div>
                     <?php
-        } else {
-        ?>
+                        } else {
+                            ?>
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Classic Cookie</h4>
-                            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal"
+                            <a href="#" class="nav-item nav-link" data-target="#registerModal"
                                 onclick="agregarAlCarrito('1', 'Classic Cookie', '2', 'Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia crujiente y deliciosa que te transportará a los recuerdos de la infancia.', 'img/Galleta1.jpg')">
                                 <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                             </a>
@@ -261,7 +268,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Monster Cookie</h4>
-                            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal"
+                            <a href="#" class="nav-item nav-link"
                                 onclick="agregarAlCarrito('2' , 'Monster Cookie', '3' ,'Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.', 'img/galleta2.jpg')">
                                 <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                             </a>
@@ -279,7 +286,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9 ">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Velvet Cookie</h4>
-                            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal"
+                            <a href="#" class="nav-item nav-link"
                                 onclick="agregarAlCarrito('3', 'Velvet Cookie', '3.5', 'Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una experiencia gourmet única.', 'img/galleta3.jpg')">
                                 <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                             </a>
@@ -300,7 +307,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Fudgy Brownie</h4>
-                            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal"
+                            <a href="#" class="nav-item nav-link"
                                 onclick="agregarAlCarrito('4', 'Fudgy Brownie', '3', 'Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para los amantes del chocolate.', 'img/brownie1.jpg')">
                                 <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                             </a>
@@ -318,7 +325,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Walnut Brownie</h4>
-                            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal"
+                            <a href="#" class="nav-item nav-link"
                                 onclick="agregarAlCarrito('5', 'Walnut Brownie', '3.5', 'Disfruta de la combinación perfecta de nueces crujientes y chocolate en nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia única para tu paladar.', 'img/brownie2.jpg')">
                                 <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                             </a>
@@ -336,7 +343,7 @@ if (isset($_SESSION['nombre'])) {
                     <div class="col-8 col-sm-9">
                         <div class="d-flex justify-content-between mr-2">
                             <h4>Cheesecake Brownie</h4>
-                            <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal"
+                            <a href="#" class="nav-item nav-link"
                                 onclick="agregarAlCarrito('6', 'Cheesecake Brownie', '4', 'Experimenta la fusión perfecta entre un brownie decadente y un suave cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no querrás perderte.', 'img/brownie3.jpg')">
                                 <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                             </a>
@@ -347,8 +354,8 @@ if (isset($_SESSION['nombre'])) {
                     </div>
                 </div>
                 <?php
-        }
-        ?>
+                        }
+                        ?>
             </div>
         </div>
     </div>
@@ -415,7 +422,7 @@ if (isset($_SESSION['nombre'])) {
 
     <!-- Modal agregar al carrito -->
     <!-- Modal -->
-    <div class="modal fade" id="modalAddToCart" tabindex="-1" role="dialog" aria-labelledby="modalAddToCart"
+    <!-- <div class="modal fade" id="modalAddToCart" tabindex="-1" role="dialog" aria-labelledby="modalAddToCart"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -431,7 +438,7 @@ if (isset($_SESSION['nombre'])) {
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Modal agregar al carrito -->
 
@@ -456,8 +463,7 @@ if (isset($_SESSION['nombre'])) {
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+
     <script>
     function agregarAlCarrito(id, nombre, precio, descripcion, imagen) {
         // Obtener el carrito actual del localStorage
@@ -477,6 +483,13 @@ if (isset($_SESSION['nombre'])) {
 
         // Guardar el carrito actualizado en el localStorage
         localStorage.setItem('carrito', JSON.stringify(carrito));
+        // Mostrar modal con sweetAlert
+        Swal.fire({
+            title: 'Producto agregado al carrito',
+            text: `1 ${producto.nombre}`,
+            icon: 'success',
+            confirmButtonText: 'Cerrar'
+        })
     }
     </script>
 

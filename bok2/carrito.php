@@ -20,7 +20,7 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
@@ -31,11 +31,21 @@
     <link href="css/style.min.css" rel="stylesheet">
     <!-- Pasarela de pagos- stripe -->
     <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script
         src="https://www.paypal.com/sdk/js?client-id=AbbIY5aLIIFfnj5unsjD8SjXEdVABq4-wJ0_sWqWtXoXp43iprm7IVA4EF-kFDSjg8AhsrdI7z_Xhe-P&currency=USD">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <style>
+.swal2-confirm {
+    background-color: #33211D !important;
+    /* Cambia el color de fondo */
+
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 </style>
 
@@ -92,7 +102,7 @@
 
 
     <!-- Page Header Start -->
-    <div id="gotas" class="container-fluid page-header mb-5 position-relative overlay-bottom">
+    <div id="gotas" class="container-fluid page-header mb-3 position-relative overlay-bottom">
         <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5"
             style="min-height: 300px">
             <h1 id="titulo" class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Carrito de compras</h1>
@@ -197,6 +207,28 @@
         </div>
     </div>
     <!--Footer End -->
+
+    <!-- Modal compra exitosa -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Compra Exitosa</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¡Gracias por tu compra! Tu pedido ha sido procesado exitosamente.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal compra exitosa -->
 
 
     <!-- Back to Top -->

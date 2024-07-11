@@ -1,10 +1,10 @@
 <?php
 
 /**
-* Este documento permite que el user pueda registrarse por primera vez dentro de la página web
-*
-*
-*/
+ * Este documento permite que el user pueda registrarse por primera vez dentro de la página web
+ *
+ *
+ */
 
 session_start();
 
@@ -37,7 +37,7 @@ if ($conn->query($sql) === true) {
     exit;
 } else {
     echo "Error en conexión: " . $conn->error;
-    
+
 }
 
 $conn->close();

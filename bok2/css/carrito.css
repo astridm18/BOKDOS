@@ -171,3 +171,9 @@
   margin-bottom: 10px;
 }
 
+.pag-buttons{
+  border-radius: 50%;
+  padding: 10px 10px;
+  margin: .3rem;
+
+}

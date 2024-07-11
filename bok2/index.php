@@ -49,11 +49,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <?php
-session_start();
-if (isset($_SESSION['nombre'])) {
-    $nombre = $_SESSION['nombre'];
-}
-?>
+            session_start();
+            if (isset($_SESSION['nombre'])) {
+                $nombre = $_SESSION['nombre'];
+            }
+            ?>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto p-4">
                     <a href="index.php" class="nav-item nav-link active">Inicio</a>
@@ -61,8 +61,8 @@ if (isset($_SESSION['nombre'])) {
                     <a href="menu.php" class="nav-item nav-link">Menú</a>
                     <a href="contact.php" class="nav-item nav-link">Contacto</a>
                     <?php
-        if (isset($nombre)) {
-        ?>
+                    if (isset($nombre)) {
+                        ?>
                     <a href="#" class="nav-item nav-link">
                         <i class="fas fa-user"></i>
                         <?php echo $nombre; ?>
@@ -71,21 +71,21 @@ if (isset($_SESSION['nombre'])) {
                         <i class="fas fa-sign-out-alt"></i>
                     </a>
                     <?php
-        } else {
-        ?>
+                    } else {
+                        ?>
                     <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
                         <i class="fas fa-user"></i> Registro
                     </a>
                     <?php
-        }
-        ?>
+                    }
+                    ?>
                 </div>
             </div>
         </nav>
         <?php
-      
-            if (isset($nombre)) {
-                ?>
+
+        if (isset($nombre)) {
+            ?>
         <div class="container-fluid">
             <div class="container-fluid">
                 <div class="row justify-content-center">
@@ -115,7 +115,7 @@ if (isset($_SESSION['nombre'])) {
         </div>
     </div>
     <?php
-               } else { 
+        } else {
             ?>
     <div class="container-fluid">
         <div class="container-fluid">
@@ -145,8 +145,8 @@ if (isset($_SESSION['nombre'])) {
     </div>
     </div>
     <?php
-               }
-            ?>
+        }
+        ?>
     <!-- Navbar End -->
 
     <!-- Carousel Start -->
@@ -265,7 +265,6 @@ if (isset($_SESSION['nombre'])) {
     <!-- Offer End -->
 
 
-
     <!-- Testimonial Start -->
     <div class="container-fluid py-5">
         <div class="container">
@@ -275,55 +274,56 @@ if (isset($_SESSION['nombre'])) {
             </div>
             <div class="owl-carousel testimonial-carousel">
                 <div class="testimonial-item">
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid" src="img/testimonial-1.jpg" alt="">
+                    <div class="d-flex align-items-center mb-3"> <img class="img-fluid" src="img/testimonial-1.jpg"
+                            alt="">
                         <div class="ml-3">
-                            <h4>Jesús Nieto</h4>
-                            <i>Diseñador Gráfico</i>
+                            <h4>Jesús Nieto</h4> <i>Diseñador Gráfico</i>
                         </div>
                     </div>
                     <p class="m-0">"BOKDOS ha llevado los dulces a otro nivel. ¡La calidad y el sabor son
                         impresionantes!"</p>
+                    <div class="text-warning mt-2"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                            class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> </div>
                 </div>
                 <div class="testimonial-item">
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid" src="img/testimonial-2.jpg" alt="">
+                    <div class="d-flex align-items-center mb-3"> <img class="img-fluid" src="img/testimonial-2.jpg"
+                            alt="">
                         <div class="ml-3">
-                            <h4>Ingrid Medina</h4>
-                            <i>Contador Público</i>
+                            <h4>Ingrid Medina</h4> <i>Contador Público</i>
                         </div>
                     </div>
                     <p class="m-0">"Los dulces de BOKDOS son una delicia inigualable, cada bocado es una experiencia
-                        celestial."
-                    </p>
+                        celestial." </p>
+                    <div class="text-warning mt-2"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                            class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="far fa-star"></i> </div>
                 </div>
                 <div class="testimonial-item">
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid" src="img/testimonial-3.jpg" alt="">
+                    <div class="d-flex align-items-center mb-3"> <img class="img-fluid" src="img/testimonial-3.jpg"
+                            alt="">
                         <div class="ml-3">
-                            <h4>Marisela Velásquez</h4>
-                            <i>Administrador Comercial</i>
+                            <h4>Marisela Velásquez</h4> <i>Administrador Comercial</i>
                         </div>
                     </div>
                     <p class="m-0">"¡Los brownies y galletas de BOKDOS son simplemente perfectos! Su sabor es
                         insuperable."</p>
+                    <div class="text-warning mt-2"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                            class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div>
                 </div>
                 <div class="testimonial-item">
-                    <div class="d-flex align-items-center mb-3">
-                        <img class="img-fluid" src="img/testimonial-4.jpg" alt="">
+                    <div class="d-flex align-items-center mb-3"> <img class="img-fluid" src="img/testimonial-4.jpg"
+                            alt="">
                         <div class="ml-3">
-                            <h4>Lony Rojas</h4>
-                            <i>Publicista</i>
+                            <h4>Lony Rojas</h4> <i>Publicista</i>
                         </div>
                     </div>
                     <p class="m-0">"Las galletas y brownies de BOKDOS son una maravilla. ¡Nunca había probado algo tan
                         divino!"</p>
+                    <div class="text-warning mt-2"> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                            class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Testimonial End -->
-
+    </div> <!-- Testimonial End -->
 
     <!-- Footer Start -->
     <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
@@ -400,9 +400,6 @@ if (isset($_SESSION['nombre'])) {
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
 
 <!-- Modal Registro -->

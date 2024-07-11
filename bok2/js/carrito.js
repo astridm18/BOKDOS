@@ -27,13 +27,20 @@ const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
             // Finalize the transaction
             onApprove: function(data, actions) {
                 reiniciarCarrito()
-                window.location.reload()
-                return actions.order.capture().then(function(details) {
-                    // Vacia el carrito en el localstorage
-                    localStorage.removeItem('carrito');
-                    console.log('El carrito ha sido reiniciado.');
+                // window.location.reload()
+                return actions.order.capture().then(async function(details) {
                     // Show a success message to the buyer
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    Swal.fire({
+                        title: 'Compra Exitosa',
+                        text: `¡Gracias por tu compra ${details.payer.name.given_name} ! Tu pedido ha sido procesado exitosamente.`,
+                        icon: 'success',
+                        confirmButtonText: 'Cerrar'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Recargar la página después de cerrar la alerta
+                            window.location.reload();
+                        }
+                    });
                 });
             },
             style: {
@@ -98,15 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 var productActions = document.createElement('div');
                 productActions.classList.add('item-actions-unique');
 
-                var productQuantity = document.createElement('input');
-                productQuantity.type = 'number';
-                productQuantity.value = 1;
-                productQuantity.min = 1;
-                productQuantity.classList.add('item-quantity-unique');
-                productQuantity.dataset.index = inicio + index; // Agregar índice de producto global
-                productQuantity.addEventListener('change', actualizarTotales);
-                productActions.appendChild(productQuantity);
-
                 var deleteButton = document.createElement('button');
                 deleteButton.classList.add('delete-btn-unique');
                 deleteButton.textContent = 'Eliminar';
@@ -152,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         for (let i = 1; i <= totalPaginas; i++) {
             let pageButton = document.createElement('button');
+            pageButton.classList.add('pag-buttons')
             pageButton.textContent = i;
             if (i === paginaActual) {
                 pageButton.disabled = true;
