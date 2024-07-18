@@ -184,7 +184,7 @@
 
 
     <!-- Service Start -->
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-3">
         <div class="container">
             <div class="section-title">
                 <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Servicios</h4>
@@ -266,7 +266,7 @@
 
 
     <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-3">
         <div class="container">
             <div class="section-title">
                 <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonio</h4>
@@ -401,7 +401,6 @@
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 </body>
-
 <!-- Modal Registro -->
 <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
     aria-hidden="true">
@@ -414,23 +413,26 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="registerForm" action="registro.php" method="POST">
+                <form id="registerForm" action="registro.php" method="POST" onsubmit="return validateRegisterForm()">
                     <div class="form-group">
                         <label for="registerName">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre">
+                        <input type="text" class="form-control" name="nombre" id="registerName"
+                            placeholder="Ingrese su nombre" required>
                     </div>
                     <div class="form-group">
-                        <label for="registerName">Apellido</label>
-                        <input type="text" class="form-control" name="apellido" placeholder="Ingrese su apellido">
+                        <label for="registerLastName">Apellido</label>
+                        <input type="text" class="form-control" name="apellido" id="registerLastName"
+                            placeholder="Ingrese su apellido" required>
                     </div>
                     <div class="form-group">
                         <label for="registerEmail">Correo Electrónico</label>
-                        <input type="email" class="form-control" name="email"
-                            placeholder="Ingrese su correo electrónico">
+                        <input type="email" class="form-control" name="email" id="registerEmail"
+                            placeholder="Ingrese su correo electrónico" required>
                     </div>
                     <div class="form-group">
                         <label for="registerPassword">Contraseña</label>
-                        <input type="password" class="form-control" name="pass" placeholder="Ingrese su contraseña">
+                        <input type="password" class="form-control" name="pass" id="registerPassword"
+                            placeholder="Ingrese su contraseña" required>
                     </div>
                     <div class="d-flex flex-column align-items-center">
                         <button type="submit" class="btn btn-primary mt-4">Registrarse</button>
@@ -444,6 +446,22 @@
         </div>
     </div>
 </div>
+
+<script>
+function validateRegisterForm() {
+    const name = document.getElementById('registerName').value.trim();
+    const lastName = document.getElementById('registerLastName').value.trim();
+    const email = document.getElementById('registerEmail').value.trim();
+    const password = document.getElementById('registerPassword').value.trim();
+
+    if (name === '' || lastName === '' || email === '' || password === '') {
+        alert('Por favor, complete todos los campos del formulario.');
+        return false;
+    }
+
+    return true;
+}
+</script>
 
 <!--Modal Inicio de sesion  -->
 <div class="modal fade" id="registerModal2" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel"
@@ -487,5 +505,7 @@ const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 // Mostrar la cantidad de productos en el span
 document.getElementById('cart-count').textContent = carrito.length;
 </script>
+<script src="js/main.js"></script>
+
 
 </html>

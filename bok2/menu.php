@@ -30,22 +30,22 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <style>
-.swal2-confirm {
-    background-color: #33211D !important;
-    /* Cambia el color de fondo */
+    .swal2-confirm {
+        background-color: #33211D !important;
+        /* Cambia el color de fondo */
 
-}
+    }
 </style>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
-.btn:hover {
-    transform: scale(1.05);
-}
+    .btn:hover {
+        transform: scale(1.05);
+    }
 
-.btn:hover:hover {
-    color: white;
-}
+    .btn:hover:hover {
+        color: white;
+    }
 </style>
 
 <body>
@@ -76,20 +76,20 @@
                     <?php
                     if (isset($nombre)) {
                         ?>
-                    <a href="#" class="nav-item nav-link">
-                        <i class="fas fa-user"></i>
-                        <?php echo $nombre; ?>
-                    </a>
-                    <a href="logout.php" class="nav-item nav-link">
-                        <i class="fas fa-sign-out-alt"></i>
-                    </a>
-                    <?php
+                        <a href="#" class="nav-item nav-link">
+                            <i class="fas fa-user"></i>
+                            <?php echo $nombre; ?>
+                        </a>
+                        <a href="logout.php" class="nav-item nav-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a>
+                        <?php
                     } else {
                         ?>
-                    <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
-                        <i class="fas fa-user"></i> Registro
-                    </a>
-                    <?php
+                        <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
+                            <i class="fas fa-user"></i> Registro
+                        </a>
+                        <?php
                     }
                     ?>
                 </div>
@@ -140,10 +140,118 @@
                         <?php
                         if (isset($nombre)) {
                             ?>
+                            <div class="col-8 col-sm-9">
+                                <div class="d-flex justify-content-between mr-2">
+                                    <h4>Classic Cookie</h4>
+                                    <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                        onclick="agregarAlCarrito('1', 'Classic Cookie', '2', 'Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia crujiente y deliciosa que te transportará a los recuerdos de la infancia.', 'img/Galleta1.jpg')">
+                                        <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                    </a>
+                                </div>
+                                <p class="m-0">Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia
+                                    crujiente y deliciosa que te transportará a los recuerdos de la infancia.</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-5">
+                            <div class="col-4 col-sm-3">
+                                <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/galleta2.jpg" alt="">
+                                <h5 class="menu-price">$3</h5>
+                            </div>
+                            <div class="col-8 col-sm-9">
+                                <div class="d-flex justify-content-between mr-2">
+                                    <h4>Monster Cookie</h4>
+                                    <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                        onclick="agregarAlCarrito('2' , 'Monster Cookie', '3' ,'Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.', 'img/galleta2.jpg')">
+                                        <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                    </a>
+                                </div>
+                                <p class="m-0">Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena
+                                    de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las
+                                    combinaciones audaces y deliciosas.</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-5">
+                            <div class="col-4 col-sm-3">
+                                <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/galleta3.jpg" alt="">
+                                <h5 class="menu-price">$3.5</h5>
+                            </div>
+                            <div class="col-8 col-sm-9 ">
+                                <div class="d-flex justify-content-between mr-2">
+                                    <h4>Velvet Cookie</h4>
+                                    <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                        onclick="agregarAlCarrito('3', 'Velvet Cookie', '3.5', 'Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una experiencia gourmet única.', 'img/galleta3.jpg')">
+                                        <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                    </a>
+                                </div>
+                                <p class="m-0">Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un
+                                    interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una
+                                    experiencia gourmet única.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h1 class="mb-5" style="text-align: center;">Brownies</h1>
+                        <div class="row align-items-center mb-5">
+                            <div class="col-4 col-sm-3">
+                                <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/brownie1.jpg" alt="">
+                                <h5 class="menu-price">$3</h5>
+                            </div>
+                            <div class="col-8 col-sm-9">
+                                <div class="d-flex justify-content-between mr-2">
+                                    <h4>Fudgy Brownie</h4>
+                                    <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                        onclick="agregarAlCarrito('4', 'Fudgy Brownie', '3', 'Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para los amantes del chocolate.', 'img/brownie1.jpg')">
+                                        <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                    </a>
+                                </div>
+                                <p class="m-0">Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con
+                                    una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para
+                                    los amantes del chocolate.</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-5">
+                            <div class="col-4 col-sm-3">
+                                <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/brownie2.jpg" alt="">
+                                <h5 class="menu-price">$3.5</h5>
+                            </div>
+                            <div class="col-8 col-sm-9">
+                                <div class="d-flex justify-content-between mr-2">
+                                    <h4>Walnut Brownie</h4>
+                                    <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                        onclick="agregarAlCarrito('5', 'Walnut Brownie', '3.5', 'Disfruta de la combinación perfecta de nueces crujientes y chocolate en nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia única para tu paladar.', 'img/brownie2.jpg')">
+                                        <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                    </a>
+                                </div>
+                                <p class="m-0">Disfruta de la combinación perfecta de nueces crujientes y chocolate en
+                                    nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia
+                                    única para tu paladar.</p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mb-5">
+                            <div class="col-4 col-sm-3">
+                                <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/brownie3.jpg" alt="">
+                                <h5 class="menu-price">$4</h5>
+                            </div>
+                            <div class="col-8 col-sm-9">
+                                <div class="d-flex justify-content-between mr-2">
+                                    <h4>Cheesecake Brownie</h4>
+                                    <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                        onclick="agregarAlCarrito('6', 'Cheesecake Brownie', '4', 'Experimenta la fusión perfecta entre un brownie decadente y un suave cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no querrás perderte.', 'img/brownie3.jpg')">
+                                        <i class="fas fa-shopping-cart text-primary fa-2x"></i>
+                                    </a>
+                                </div>
+                                <p class="m-0">Experimenta la fusión perfecta entre un brownie decadente y un suave
+                                    cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no
+                                    querrás perderte.</p>
+                            </div>
+                        </div>
+                        <?php
+                        } else {
+                            ?>
                         <div class="col-8 col-sm-9">
                             <div class="d-flex justify-content-between mr-2">
                                 <h4>Classic Cookie</h4>
-                                <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                <a href="#" class="nav-item nav-link" data-target="#registerModal"
                                     onclick="agregarAlCarrito('1', 'Classic Cookie', '2', 'Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia crujiente y deliciosa que te transportará a los recuerdos de la infancia.', 'img/Galleta1.jpg')">
                                     <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                                 </a>
@@ -160,7 +268,7 @@
                         <div class="col-8 col-sm-9">
                             <div class="d-flex justify-content-between mr-2">
                                 <h4>Monster Cookie</h4>
-                                <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                <a href="#" class="nav-item nav-link"
                                     onclick="agregarAlCarrito('2' , 'Monster Cookie', '3' ,'Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.', 'img/galleta2.jpg')">
                                     <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                                 </a>
@@ -178,7 +286,7 @@
                         <div class="col-8 col-sm-9 ">
                             <div class="d-flex justify-content-between mr-2">
                                 <h4>Velvet Cookie</h4>
-                                <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                <a href="#" class="nav-item nav-link"
                                     onclick="agregarAlCarrito('3', 'Velvet Cookie', '3.5', 'Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una experiencia gourmet única.', 'img/galleta3.jpg')">
                                     <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                                 </a>
@@ -199,7 +307,7 @@
                         <div class="col-8 col-sm-9">
                             <div class="d-flex justify-content-between mr-2">
                                 <h4>Fudgy Brownie</h4>
-                                <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                <a href="#" class="nav-item nav-link"
                                     onclick="agregarAlCarrito('4', 'Fudgy Brownie', '3', 'Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para los amantes del chocolate.', 'img/brownie1.jpg')">
                                     <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                                 </a>
@@ -217,7 +325,7 @@
                         <div class="col-8 col-sm-9">
                             <div class="d-flex justify-content-between mr-2">
                                 <h4>Walnut Brownie</h4>
-                                <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                <a href="#" class="nav-item nav-link"
                                     onclick="agregarAlCarrito('5', 'Walnut Brownie', '3.5', 'Disfruta de la combinación perfecta de nueces crujientes y chocolate en nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia única para tu paladar.', 'img/brownie2.jpg')">
                                     <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                                 </a>
@@ -235,7 +343,7 @@
                         <div class="col-8 col-sm-9">
                             <div class="d-flex justify-content-between mr-2">
                                 <h4>Cheesecake Brownie</h4>
-                                <a href="#" data-toggle="modal" data-target="#modalAddToCart"
+                                <a href="#" class="nav-item nav-link"
                                     onclick="agregarAlCarrito('6', 'Cheesecake Brownie', '4', 'Experimenta la fusión perfecta entre un brownie decadente y un suave cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no querrás perderte.', 'img/brownie3.jpg')">
                                     <i class="fas fa-shopping-cart text-primary fa-2x"></i>
                                 </a>
@@ -246,114 +354,6 @@
                         </div>
                     </div>
                     <?php
-                        } else {
-                            ?>
-                    <div class="col-8 col-sm-9">
-                        <div class="d-flex justify-content-between mr-2">
-                            <h4>Classic Cookie</h4>
-                            <a href="#" class="nav-item nav-link" data-target="#registerModal"
-                                onclick="agregarAlCarrito('1', 'Classic Cookie', '2', 'Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia crujiente y deliciosa que te transportará a los recuerdos de la infancia.', 'img/Galleta1.jpg')">
-                                <i class="fas fa-shopping-cart text-primary fa-2x"></i>
-                            </a>
-                        </div>
-                        <p class="m-0">Disfruta de nuestra clásica galleta con trocitos de chocolate, una delicia
-                            crujiente y deliciosa que te transportará a los recuerdos de la infancia.</p>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/galleta2.jpg" alt="">
-                        <h5 class="menu-price">$3</h5>
-                    </div>
-                    <div class="col-8 col-sm-9">
-                        <div class="d-flex justify-content-between mr-2">
-                            <h4>Monster Cookie</h4>
-                            <a href="#" class="nav-item nav-link"
-                                onclick="agregarAlCarrito('2' , 'Monster Cookie', '3' ,'Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las combinaciones audaces y deliciosas.', 'img/galleta2.jpg')">
-                                <i class="fas fa-shopping-cart text-primary fa-2x"></i>
-                            </a>
-                        </div>
-                        <p class="m-0">Prepárate para una explosión de sabor con nuestra galleta monstruosa! Llena
-                            de trozos de chocolate, nueces y chispas de colores. Ideal para los amantes de las
-                            combinaciones audaces y deliciosas.</p>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/galleta3.jpg" alt="">
-                        <h5 class="menu-price">$3.5</h5>
-                    </div>
-                    <div class="col-8 col-sm-9 ">
-                        <div class="d-flex justify-content-between mr-2">
-                            <h4>Velvet Cookie</h4>
-                            <a href="#" class="nav-item nav-link"
-                                onclick="agregarAlCarrito('3', 'Velvet Cookie', '3.5', 'Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una experiencia gourmet única.', 'img/galleta3.jpg')">
-                                <i class="fas fa-shopping-cart text-primary fa-2x"></i>
-                            </a>
-                        </div>
-                        <p class="m-0">Sumérgete en la suavidad y elegancia de nuestra galleta de terciopelo. Con un
-                            interior suave y un ligero toque de dulzura. Perfecta para aquellos que buscan una
-                            experiencia gourmet única.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <h1 class="mb-5" style="text-align: center;">Brownies</h1>
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/brownie1.jpg" alt="">
-                        <h5 class="menu-price">$3</h5>
-                    </div>
-                    <div class="col-8 col-sm-9">
-                        <div class="d-flex justify-content-between mr-2">
-                            <h4>Fudgy Brownie</h4>
-                            <a href="#" class="nav-item nav-link"
-                                onclick="agregarAlCarrito('4', 'Fudgy Brownie', '3', 'Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para los amantes del chocolate.', 'img/brownie1.jpg')">
-                                <i class="fas fa-shopping-cart text-primary fa-2x"></i>
-                            </a>
-                        </div>
-                        <p class="m-0">Déjate tentar por nuestro brownie esponjoso y lleno de sabor a chocolate. Con
-                            una textura densa y un intenso sabor a cacao, este brownie es el postre perfecto para
-                            los amantes del chocolate.</p>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/brownie2.jpg" alt="">
-                        <h5 class="menu-price">$3.5</h5>
-                    </div>
-                    <div class="col-8 col-sm-9">
-                        <div class="d-flex justify-content-between mr-2">
-                            <h4>Walnut Brownie</h4>
-                            <a href="#" class="nav-item nav-link"
-                                onclick="agregarAlCarrito('5', 'Walnut Brownie', '3.5', 'Disfruta de la combinación perfecta de nueces crujientes y chocolate en nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia única para tu paladar.', 'img/brownie2.jpg')">
-                                <i class="fas fa-shopping-cart text-primary fa-2x"></i>
-                            </a>
-                        </div>
-                        <p class="m-0">Disfruta de la combinación perfecta de nueces crujientes y chocolate en
-                            nuestro brownie de nueces. Cada bocado está lleno de sabor y textura, una experiencia
-                            única para tu paladar.</p>
-                    </div>
-                </div>
-                <div class="row align-items-center mb-5">
-                    <div class="col-4 col-sm-3">
-                        <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/brownie3.jpg" alt="">
-                        <h5 class="menu-price">$4</h5>
-                    </div>
-                    <div class="col-8 col-sm-9">
-                        <div class="d-flex justify-content-between mr-2">
-                            <h4>Cheesecake Brownie</h4>
-                            <a href="#" class="nav-item nav-link"
-                                onclick="agregarAlCarrito('6', 'Cheesecake Brownie', '4', 'Experimenta la fusión perfecta entre un brownie decadente y un suave cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no querrás perderte.', 'img/brownie3.jpg')">
-                                <i class="fas fa-shopping-cart text-primary fa-2x"></i>
-                            </a>
-                        </div>
-                        <p class="m-0">Experimenta la fusión perfecta entre un brownie decadente y un suave
-                            cheesecake en nuestro cheesecake brownie. Este postre es una delicia indulgente que no
-                            querrás perderte.</p>
-                    </div>
-                </div>
-                <?php
                         }
                         ?>
             </div>
@@ -465,32 +465,32 @@
 
 
     <script>
-    function agregarAlCarrito(id, nombre, precio, descripcion, imagen) {
-        // Obtener el carrito actual del localStorage
-        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        function agregarAlCarrito(id, nombre, precio, descripcion, imagen) {
+            // Obtener el carrito actual del localStorage
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-        // Crear el nuevo producto
-        let producto = {
-            id: id,
-            nombre: nombre,
-            precio: precio,
-            descripcion: descripcion,
-            imagen: imagen
-        };
+            // Crear el nuevo producto
+            let producto = {
+                id: id,
+                nombre: nombre,
+                precio: precio,
+                descripcion: descripcion,
+                imagen: imagen
+            };
 
-        // Agregar el producto al carrito
-        carrito.push(producto);
+            // Agregar el producto al carrito
+            carrito.push(producto);
 
-        // Guardar el carrito actualizado en el localStorage
-        localStorage.setItem('carrito', JSON.stringify(carrito));
-        // Mostrar modal con sweetAlert
-        Swal.fire({
-            title: 'Producto agregado al carrito',
-            text: `1 ${producto.nombre}`,
-            icon: 'success',
-            confirmButtonText: 'Cerrar'
-        })
-    }
+            // Guardar el carrito actualizado en el localStorage
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+            // Mostrar modal con sweetAlert
+            Swal.fire({
+                title: 'Producto agregado al carrito',
+                text: `1 ${producto.nombre}`,
+                icon: 'success',
+                confirmButtonText: 'Cerrar'
+            })
+        }
     </script>
 
 </body>

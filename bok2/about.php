@@ -29,7 +29,7 @@
     <link href="css/animaciones.css" rel="stylesheet">
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 </style>
 
 
@@ -62,20 +62,20 @@
                     <?php
                     if (isset($nombre)) {
                         ?>
-                        <a href="#" class="nav-item nav-link">
-                            <i class="fas fa-user"></i>
-                            <?php echo $nombre; ?>
-                        </a>
-                        <a href="logout.php" class="nav-item nav-link">
-                            <i class="fas fa-sign-out-alt"></i>
-                        </a>
-                        <?php
+                    <a href="#" class="nav-item nav-link">
+                        <i class="fas fa-user"></i>
+                        <?php echo $nombre; ?>
+                    </a>
+                    <a href="logout.php" class="nav-item nav-link">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                    <?php
                     } else {
                         ?>
-                        <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
-                            <i class="fas fa-user"></i> Registro
-                        </a>
-                        <?php
+                    <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
+                        <i class="fas fa-user"></i> Registro
+                    </a>
+                    <?php
                     }
                     ?>
                 </div>

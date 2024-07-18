@@ -32,7 +32,7 @@ const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
                     // Show a success message to the buyer
                     Swal.fire({
                         title: 'Compra Exitosa',
-                        text: `¡Gracias por tu compra ${details.payer.name.given_name} ! Tu pedido ha sido procesado exitosamente.`,
+                        text: `¡Gracias por tu compra + ${details.payer.name.given_name} ! Tu pedido ha sido procesado exitosamente.`,
                         icon: 'success',
                         confirmButtonText: 'Cerrar'
                     }).then((result) => {
@@ -52,6 +52,7 @@ console.log(totalPrecio);
 document.addEventListener('DOMContentLoaded', function() {
     var cartItems = document.querySelector('.cart-items-unique');
     var emptyCartMessage = document.querySelector('.empty-cart-message');
+    var menuButtonContainer = document.querySelector('.menu-button');
     var carTotalAmount = document.querySelector('.total-items');
     var resumenTotalAumount = document.querySelector('.summary-items');
     var precioTotalCarrito = document.querySelector('.summary-total');
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (productosPagina.length > 0) {
             cartItems.style.display = 'block';
             emptyCartMessage.style.display = 'none';
-
+menuButtonContainer.style.display='block';
             productosPagina.forEach(function(producto, index) {
                 var productCard = document.createElement('div');
                 productCard.classList.add('cart-item-unique');
@@ -127,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             cartItems.style.display = 'none';
             emptyCartMessage.style.display = 'block';
+            menuButtonContainer.style.display='none';
         }
     }
 

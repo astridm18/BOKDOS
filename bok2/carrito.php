@@ -35,25 +35,25 @@
 
     <script
         src="https://www.paypal.com/sdk/js?client-id=AbbIY5aLIIFfnj5unsjD8SjXEdVABq4-wJ0_sWqWtXoXp43iprm7IVA4EF-kFDSjg8AhsrdI7z_Xhe-P&currency=USD">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <style>
-.swal2-confirm {
-    background-color: #33211D !important;
-    /* Cambia el color de fondo */
+    @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
-}
+    .swal2-confirm {
+        background-color: #33211D !important;
+        /* Cambia el color de fondo */
 
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+    }
 </style>
 
 <body>
 
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
-            <a href="php/index.php" class="navbar-brand px-lg-4 m-0">
+            <a href="index.html" class="navbar-brand px-lg-4 m-0">
                 <h1 style="font-family:monoton; font-weight: 70 !important"
                     class="m-0 display-4 text-uppercase text-white">BO
                     <span style="font-size: 74px; position: relative; top: 7px;" class="larger-k-logo">K</span>
@@ -78,20 +78,20 @@
                     <?php
                     if (isset($nombre)) {
                         ?>
-                    <a href="#" class="nav-item nav-link">
-                        <i class="fas fa-user"></i>
-                        <?php echo $nombre; ?>
-                    </a>
-                    <a href="logout.php" class="nav-item nav-link">
-                        <i class="fas fa-sign-out-alt"></i>
-                    </a>
-                    <?php
+                        <a href="#" class="nav-item nav-link">
+                            <i class="fas fa-user"></i>
+                            <?php echo $nombre; ?>
+                        </a>
+                        <a href="logout.php" class="nav-item nav-link">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </a>
+                        <?php
                     } else {
                         ?>
-                    <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
-                        <i class="fas fa-user"></i> Registro
-                    </a>
-                    <?php
+                        <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">
+                            <i class="fas fa-user"></i> Registro
+                        </a>
+                        <?php
                     }
                     ?>
                 </div>
@@ -122,13 +122,22 @@
             <div class="cart-container-unique">
                 <div class="cart-left-unique">
                     <h2 class="cart-title-unique">Carrito (<span class="total-items" id="total-items">0</span>
-                        artículos)</h2>
+                        artículos)
+                    </h2>
                     <div class="cart-items-unique">
 
                     </div>
 
                     <div class="empty-cart-message">
                         No hay productos en el carrito.
+                    </div>
+                    <div class="d-inline-block mt-3 menu-button-container" style="display: none;">
+                        <a href="menu.php">
+                            <button class="menu-button btn btn-primary btn-sm shadow rounded-pill"
+                                style="background-color: #DA9F5B; color: white;">
+                                <span class="text-uppercase">Menú</span>
+                            </button>
+                        </a>
                     </div>
                     <div class="pagination">
                         <!-- Botones de paginación -->
